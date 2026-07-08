@@ -131,7 +131,7 @@ const QuizView: React.FC = () => {
           {isAnswered && (
             <div className="mt-6 animate-fade-in">
               <div className="bg-blue-50 p-4 rounded-lg text-blue-800 text-sm mb-6 border border-blue-100">
-                <strong>Paaiškinimas:</strong> {currentQuestion.explanation}
+                <strong>Paaiškinimas.</strong> {currentQuestion.explanation}
               </div>
               <div className="flex justify-end">
                 <button

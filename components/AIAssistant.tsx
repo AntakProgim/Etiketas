@@ -58,9 +58,10 @@ interface AIAssistantProps {
   currentTopic?: Topic | null;
   currentLesson?: Lesson | null;
   userRole?: 'student' | 'employee' | null;
+  selectedGoals?: string[];
 }
 
-const AIAssistant: React.FC<AIAssistantProps> = ({ currentTopic, currentLesson, userRole }) => {
+const AIAssistant: React.FC<AIAssistantProps> = ({ currentTopic, currentLesson, userRole, selectedGoals }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([
     { role: 'model', text: 'Sveiki! Aš esu Jūsų asmeninis etiketo ir protokolo gidas mokyklos bendruomenei. \n\nGaliu patarti įvairiais klausimais:\n- Kaip rengtis mokyklos šventei ar egzaminui?\n- Kaip elgtis valgykloje ar renginio metu?\n- Kaip mandagiai bendrauti su mokytojais ar tėvais?\n- Kokią dovaną išrinkti klasės vadovui?\n\nKuo galiu Jums padėti šiandien?' }
   ]);
@@ -86,7 +87,8 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ currentTopic, currentLesson, 
       const context = {
         topic: currentTopic ? { title: currentTopic.title, description: currentTopic.description } : undefined,
         lesson: currentLesson ? { title: currentLesson.title, content: currentLesson.content } : undefined,
-        userRole: userRole || undefined
+        userRole: userRole || undefined,
+        selectedGoals: selectedGoals || undefined
       };
       
       const responseText = await getGeminiResponse(userMessage, context);

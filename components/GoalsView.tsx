@@ -22,9 +22,9 @@ const GoalsView: React.FC<GoalsViewProps> = ({ selectedGoals, onToggleGoal, user
   return (
     <div className="animate-fade-in-up">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-serif font-bold text-gray-900 dark:text-white mb-4">Mano mokymosi tikslai</h2>
+        <h2 className="text-3xl font-serif font-bold text-gray-900 dark:text-white mb-4">Mano profilis ir tikslai</h2>
         <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Pasirinkite sritis, kurias norite tobulinti. Tai padės mums ateityje pritaikyti turinį jūsų poreikiams.
+          Pasirinkite savo vaidmenį ir sritis, kurias norite tobulinti. Tai padės dirbtiniam intelektui pateikti jums asmeniškai pritaikytus patarimus ir situacijas.
         </p>
       </div>
 

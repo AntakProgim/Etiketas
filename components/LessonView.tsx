@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Lesson, UserRole } from '../types';
-import { ArrowLeft, CheckCircle, Circle, BookmarkPlus, ImageOff, Sparkles, Volume2, Square, Play } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Circle, BookmarkPlus, ImageOff, Sparkles, Volume2, Square, Briefcase, GraduationCap } from 'lucide-react';
 import AIAssistant from './AIAssistant';
 import { TOPICS } from '../constants';
 
@@ -12,9 +12,10 @@ interface LessonViewProps {
   onSaveRule: (text: string, lessonTitle: string) => void;
   onSelectLesson: (lesson: Lesson) => void;
   userRole?: UserRole | null;
+  selectedGoals?: string[];
 }
 
-const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, onToggleComplete, onSaveRule, onSelectLesson, userRole }) => {
+const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, onToggleComplete, onSaveRule, onSelectLesson, userRole, selectedGoals }) => {
   const [selection, setSelection] = useState<{ x: number; y: number; text: string } | null>(null);
   const [imgError, setImgError] = useState(false);
   const [showAI, setShowAI] = useState(false);
@@ -74,14 +75,6 @@ const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, on
     
     window.speechSynthesis.speak(utterance);
     setIsSpeaking(true);
-  };
-
-  const playPhrase = (phrase: string, lang: string) => {
-    window.speechSynthesis.cancel();
-    setIsSpeaking(false); // Stop main text reading if active
-    const utterance = new SpeechSynthesisUtterance(phrase);
-    utterance.lang = lang;
-    window.speechSynthesis.speak(utterance);
   };
 
   // Find related lessons
@@ -148,33 +141,6 @@ const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, on
             <p>Pažymėkite bet kurį tekstą pelyte, kad išsaugotumėte svarbią taisyklę.</p>
           </div>
 
-          {/* Audio Phrases Section */}
-          {lesson.audioPhrases && lesson.audioPhrases.length > 0 && (
-            <div className="mb-8 p-4 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-700">
-              <h4 className="font-serif font-bold text-gray-800 dark:text-white mb-3 flex items-center">
-                <Volume2 className="w-5 h-5 mr-2 text-primary-600 dark:text-primary-400" />
-                Tarimas
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {lesson.audioPhrases.map((phrase, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => playPhrase(phrase.phrase, phrase.lang)}
-                    className="flex items-center justify-between bg-white dark:bg-slate-800 p-3 rounded-lg border border-gray-200 dark:border-slate-700 hover:border-primary-300 dark:hover:border-primary-500 hover:shadow-sm transition-all text-left group"
-                  >
-                    <div>
-                      <span className="font-medium text-gray-800 dark:text-gray-200 block">{phrase.phrase}</span>
-                      {phrase.label && <span className="text-xs text-gray-500 dark:text-gray-400">{phrase.label}</span>}
-                    </div>
-                    <div className="bg-primary-50 dark:bg-primary-900/40 p-2 rounded-full text-primary-600 dark:text-primary-400 group-hover:bg-primary-100 dark:group-hover:bg-primary-900/60 transition-colors">
-                      <Play className="w-4 h-4 fill-current" />
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
           <div 
             ref={contentRef}
             className="prose dark:prose-invert prose-slate prose-lg max-w-none 
@@ -182,6 +148,45 @@ const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, on
               prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-li:marker:text-primary-500 dark:prose-li:marker:text-primary-400"
             dangerouslySetInnerHTML={{ __html: lesson.content }}
           />
+
+          {/* Real-life Scenarios Section */}
+          {lesson.scenarios && lesson.scenarios.length > 0 && (
+            <div className="mt-12 mb-8 animate-fade-in-up">
+              <h3 className="text-2xl font-serif font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                <Sparkles className="w-6 h-6 mr-3 text-amber-500" />
+                Situacijos iš gyvenimo
+              </h3>
+              <div className="grid gap-6">
+                {lesson.scenarios
+                  .filter(scenario => !userRole || scenario.role === 'all' || scenario.role === userRole)
+                  .map((scenario, index) => (
+                    <div key={index} className={`rounded-xl border-l-4 p-6 shadow-sm ${
+                      scenario.role === 'student' 
+                        ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-500' 
+                        : scenario.role === 'employee'
+                        ? 'bg-emerald-50 dark:bg-emerald-900/20 border-emerald-500'
+                        : 'bg-purple-50 dark:bg-purple-900/20 border-purple-500'
+                    }`}>
+                      <div className="flex items-center mb-3">
+                        {scenario.role === 'student' && <GraduationCap className="w-5 h-5 mr-2 text-blue-600 dark:text-blue-400" />}
+                        {scenario.role === 'employee' && <Briefcase className="w-5 h-5 mr-2 text-emerald-600 dark:text-emerald-400" />}
+                        <span className="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                          {scenario.role === 'student' ? 'Mokinio situacija' : scenario.role === 'employee' ? 'Darbuotojo situacija' : 'Bendra situacija'}
+                        </span>
+                      </div>
+                      <h4 className="font-bold text-lg text-gray-900 dark:text-white mb-2">{scenario.situation}</h4>
+                      <div className="mb-3">
+                        <span className="font-semibold text-primary-700 dark:text-primary-300">Kaip elgtis: </span>
+                        <span className="text-gray-700 dark:text-gray-300">{scenario.action}</span>
+                      </div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 italic border-t border-gray-200 dark:border-gray-700 pt-2 mt-2">
+                        Kodėl? {scenario.explanation}
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
@@ -242,7 +247,7 @@ const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, on
 
       {showAI && (
         <div className="animate-fade-in-up mb-8">
-          <AIAssistant currentLesson={lesson} userRole={userRole} />
+          <AIAssistant currentLesson={lesson} userRole={userRole} selectedGoals={selectedGoals} />
         </div>
       )}
     </div>

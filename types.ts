@@ -5,12 +5,20 @@ export interface AudioPhrase {
   label?: string;
 }
 
+export interface Scenario {
+  role: 'student' | 'employee' | 'all';
+  situation: string;
+  action: string;
+  explanation: string;
+}
+
 export interface Lesson {
   id: string;
   title: string;
   content: string; // Can be markdown or HTML string
   imageUrl?: string;
   audioPhrases?: AudioPhrase[];
+  scenarios?: Scenario[];
 }
 
 export interface Topic {

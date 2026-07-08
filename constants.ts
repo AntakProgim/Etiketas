@@ -6,11 +6,11 @@ export const APP_SUBTITLE = "Jūsų gidas į eleganciją ir sėkmę";
 export const STYLE_GUIDE = {
   colors: {
     primary: {
-      50: 'bg-primary-50',
+      50: 'bg-primary-50 dark:bg-primary-900/20',
       100: 'bg-primary-100',
       500: 'bg-primary-500',
       600: 'bg-primary-600',
-      800: 'text-primary-800',
+      800: 'text-primary-800 dark:text-primary-300',
       900: 'text-primary-900',
     },
     gold: {
@@ -19,10 +19,10 @@ export const STYLE_GUIDE = {
     },
     neutral: {
       bg: 'bg-slate-50',
-      surface: 'bg-white',
-      text: 'text-gray-700',
-      muted: 'text-gray-500',
-      border: 'border-gray-100'
+      surface: 'bg-white dark:bg-slate-800',
+      text: 'text-gray-700 dark:text-gray-300',
+      muted: 'text-gray-500 dark:text-gray-400',
+      border: 'border-gray-100 dark:border-slate-700'
     }
   },
   typography: {
@@ -31,12 +31,12 @@ export const STYLE_GUIDE = {
       serif: 'font-serif',
     },
     headings: {
-      h1: 'font-serif text-3xl md:text-4xl font-bold text-primary-800',
-      h2: 'font-serif text-2xl md:text-3xl font-bold text-primary-800',
-      h3: 'font-serif text-xl font-bold text-primary-800 mb-4',
+      h1: 'font-serif text-3xl md:text-4xl font-bold text-primary-800 dark:text-primary-300',
+      h2: 'font-serif text-2xl md:text-3xl font-bold text-primary-800 dark:text-primary-300',
+      h3: 'font-serif text-xl font-bold text-primary-800 dark:text-primary-300 mb-4',
     },
-    body: 'font-sans text-base text-gray-700 leading-relaxed',
-    caption: 'font-sans text-sm text-gray-500',
+    body: 'font-sans text-base text-gray-700 dark:text-gray-300 leading-relaxed',
+    caption: 'font-sans text-sm text-gray-500 dark:text-gray-400',
   },
   spacing: {
     container: 'max-w-5xl mx-auto px-4 md:px-8',
@@ -54,16 +54,16 @@ export const STYLE_GUIDE = {
     }
   },
   components: {
-    card: 'bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 overflow-hidden',
+    card: 'bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md transition-all duration-300 overflow-hidden',
     button: {
       primary: 'bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors shadow-sm font-medium flex items-center justify-center',
-      secondary: 'bg-white text-primary-600 border border-primary-200 hover:bg-primary-50 px-6 py-3 rounded-lg transition-colors font-medium flex items-center justify-center',
-      icon: 'p-2 rounded-full hover:bg-gray-100 transition-colors flex items-center justify-center',
-      ghost: 'text-gray-500 hover:text-primary-600 transition-colors font-medium cursor-pointer'
+      secondary: 'bg-white dark:bg-slate-800 text-primary-600 dark:text-primary-400 border border-primary-200 hover:bg-primary-50 dark:bg-primary-900/20 px-6 py-3 rounded-lg transition-colors font-medium flex items-center justify-center',
+      icon: 'p-2 rounded-full hover:bg-gray-100 dark:bg-slate-700 transition-colors flex items-center justify-center',
+      ghost: 'text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:text-primary-400 transition-colors font-medium cursor-pointer'
     },
-    input: 'w-full p-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-shadow',
-    badge: 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800',
-    divider: 'border-t border-gray-100 my-6',
+    input: 'w-full p-3 rounded-lg border border-gray-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-shadow',
+    badge: 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800 dark:text-primary-300',
+    divider: 'border-t border-gray-100 dark:border-slate-700 my-6',
     tooltip: 'absolute bg-gray-800 text-white text-xs p-2 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none'
   }
 };
@@ -80,29 +80,29 @@ export const TOPICS: Topic[] = [
       {
         id: 'values',
         title: 'Etiketas ir vertybės',
-        imageUrl: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Etiketas ir vertybių sistema</h3>
-          <p class="mb-4 text-gray-700">Etiketas dažniausiai suprantamas kaip visuma elgesio taisyklių, kuriose vienaip ar kitaip atsispindi tarpusavio santykiai. Etiketas yra situatyvinio pobūdžio reiškinys, t.y. tam tikro žodžio, gesto ar veiksmo parinkimą nulemianti konkreti situacija.</p>
-          <p class="mb-4 text-gray-700">Pagrindiniai šiuolaikinio etiketo principai.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Etiketas ir vertybių sistema</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Etiketas dažniausiai suprantamas kaip visuma elgesio taisyklių, kuriose vienaip ar kitaip atsispindi tarpusavio santykiai. Etiketas yra situatyvinio pobūdžio reiškinys, t.y. tam tikro žodžio, gesto ar veiksmo parinkimą nulemianti konkreti situacija.</p>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Pagrindiniai šiuolaikinio etiketo principai.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Humaniškumas ir žmoniškumas.</strong> Mandagumas, taktiškumas, korektiškumas.</li>
             <li><strong>Veiksmų tikslingumas.</strong> Elgtis išmintingai, paprastai ir patogiai.</li>
             <li><strong>Elgesio grožis</strong> ir estetinis patrauklumas.</li>
             <li><strong>Tradicijų ir papročių paisymas.</strong></li>
           </ul>
-          <p class="mb-4 text-gray-700">Etiketo paskirtis – mažinti nepagrįstą socialinę-psichologinę įtampą, baimę, agresiją, padėti užmegzti kontaktus.</p>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Etiketo paskirtis – mažinti nepagrįstą socialinę-psichologinę įtampą, baimę, agresiją, padėti užmegzti kontaktus.</p>
         `
       },
       {
         id: 'history',
         title: 'Ekskursas į praeitį',
-        imageUrl: 'https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Etiketo kilmė</h3>
-          <p class="mb-4 text-gray-700">Žodis „etiketas“ atsirado nuo paprasto draudimo „nemindžioti žolės“ Liudviko XIV dvare. Sodininkas prismaigstė lentelių su užrašu „Po žolę nevaikščioti“ (pranc. <em>etiquette</em> – etiketė, lentelė).</p>
-          <p class="mb-4 text-gray-700">Vėliau „etiketas“ tapo ženklais, apibrėžiančiais, ką asmuo gali daryti ar ko turi vengti. Iš Versalio etiketas pradėjo plisti po pasaulį kaip karališkųjų rūmų elgesio kanonai.</p>
-          <p class="mb-4 text-gray-700">Senovės Kinijos mąstytojas Konfucijus etiketui (<em>li</em>) skyrė ypatingą dėmesį, teigdamas, kad jis formuoja harmoningus santykius. Viduramžiais riterių luomas sukūrė savo garbės kodeksą, pagrįstą pagarba, dosnumu ir rūpesčiu silpnesniais.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Etiketo kilmė</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Žodis „etiketas“ atsirado nuo paprasto draudimo „nemindžioti žolės“ Liudviko XIV dvare. Sodininkas prismaigstė lentelių su užrašu „Po žolę nevaikščioti“ (pranc. <em>etiquette</em> – etiketė, lentelė).</p>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Vėliau „etiketas“ tapo ženklais, apibrėžiančiais, ką asmuo gali daryti ar ko turi vengti. Iš Versalio etiketas pradėjo plisti po pasaulį kaip karališkųjų rūmų elgesio kanonai.</p>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Senovės Kinijos mąstytojas Konfucijus etiketui (<em>li</em>) skyrė ypatingą dėmesį, teigdamas, kad jis formuoja harmoningus santykius. Viduramžiais riterių luomas sukūrė savo garbės kodeksą, pagrįstą pagarba, dosnumu ir rūpesčiu silpnesniais.</p>
         `
       }
     ]
@@ -118,7 +118,7 @@ export const TOPICS: Topic[] = [
       {
         id: 'greetings',
         title: 'Pasisveikinimo menas',
-        imageUrl: 'https://images.unsplash.com/photo-1516780236580-ef416334d5b4?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80',
         audioPhrases: [
           { phrase: "Laba diena", lang: "lt-LT", label: "Lietuviškai" },
           { phrase: "Good morning", lang: "en-US", label: "Angliškai (Ryte)" },
@@ -126,51 +126,97 @@ export const TOPICS: Topic[] = [
           { phrase: "Guten Tag", lang: "de-DE", label: "Vokiškai" }
         ],
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Kas ką sveikina pirmas?</h3>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kas ką sveikina pirmas?</h3>
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Pasisveikinimas mokykloje" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Mokinys</strong> sveikina mokytoją.</li>
             <li><strong>Jaunesnis</strong> sveikina vyresnį.</li>
             <li><strong>Ateinantis</strong> sveikina stovintį.</li>
             <li><strong>Vėluojantis</strong> sveikina laukiančius (klasę ir mokytoją).</li>
             <li><strong>Berniukas</strong> sveikina mergaitę.</li>
           </ul>
-          <p class="mb-4 text-gray-700">Šiuolaikinė taisyklė: <strong>pirmas sveikinasi tas, kuris yra mandagesnis</strong>.</p>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Rankos paspaudimas</h3>
-          <p class="mb-4 text-gray-700">Rankos paspaudimas rodo pokalbio pradžią ir pabaigą. Mokykloje rankos paspaudimas dažniau naudojamas oficialiuose renginiuose arba sveikinant su apdovanojimais.</p>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Šiuolaikinė taisyklė: <strong>pirmas sveikinasi tas, kuris yra mandagesnis</strong>.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Rankos paspaudimas</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Rankos paspaudimas rodo pokalbio pradžią ir pabaigą. Mokykloje rankos paspaudimas dažniau naudojamas oficialiuose renginiuose arba sveikinant su apdovanojimais.</p>
+        `
+      },
+      {
+        id: 'greeting_customs',
+        title: 'Skirtingi pasisveikinimo būdai',
+        imageUrl: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80',
+        content: `
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kaip sveikintis su skirtingais žmonėmis?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Pasisveikinimas priklauso nuo aplinkos, žmogaus amžiaus ir jūsų santykio:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Su mokytojais ir vadovais.</strong> Visada naudokite oficialų „Laba diena“ ar „Labas rytas“. Dažniausiai palydima lengvu galvos linktelėjimu ir pagarbiu akių kontaktu.</li>
+            <li><strong>Su vyresnio amžiaus žmonėmis.</strong> Išlaikykite pagarbą. Kreipkitės „Jūs“, net jei tai šeimos draugai (nebent jie paprašė kitaip). Pirmas pasisveikinkite jūs.</li>
+            <li><strong>Su bendraamžiais ir draugais.</strong> Tinka laisvesnis formatas: „Labas“, „Sveikas(-a)“. Vaikinai dažniau sumuša rankomis, merginos – galbūt apsikabina (jei tai artimi draugai).</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kaip taisyklingai paspausti ranką?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Rankos paspaudimas yra klasikinis, oficialus pasisveikinimo būdas, kurį turėtų mokėti kiekvienas:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Tvirtumas.</strong> Paspaudimas neturi būti nei per silpnas (it „negyva žuvis“), nei per stiprus (it spaustumėte reples), kad netyčia nesukeltumėte skausmo. Jis turi būti užtikrintas, tvirtas delnas į delną.</li>
+            <li><strong>Trukmė.</strong> Idealus rankos paspaudimas trunka apie 2–3 sekundes (2-3 trumpi kryptelėjimai žemyn-aukštyn).</li>
+            <li><strong>Akių kontaktas.</strong> Spaudžiant ranką būtina žiūrėti žmogui į akis ir šypsotis. Žiūrėjimas į žemę rodo nepasitikėjimą arba nepagarbą.</li>
+            <li><strong>Kas pirmas ištiesia ranką?</strong> Oficialioje aplinkoje vyresnis amžiumi arba aukštesnio rango asmuo (pvz., mokytojas, vadovas) pirmas pasiūlo ranką. Jei esate svečias, šeimininkas pirmas ištiesia ranką pasisveikinti.</li>
+            <li><strong>Ar būtina tiesti ranką?</strong> Ne, tai nėra privaloma. Jei sergate, jaučiatės negerai, nenorite fizinio kontakto ar tai prieštarauja jūsų įsitikinimams, galite tiesiog pagarbiai linktelėti galvą ir mandagiai pasisveikinti žodžiu.</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kaip atsakyti į pasisveikinimą?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tai, kaip priimate pasisveikinimą, parodo jūsų dėmesingumą ir kultūrą. Svarbu atskirti oficialią ir neformalią aplinką bei tinkamai pripažinti kito žmogaus gestą:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Oficialioje aplinkoje.</strong> Į mokytojo ar suaugusiojo „Laba diena“ ar „Labas rytas“ visada atsakoma tokiu pat formaliu pasisveikinimu („Laba diena“). Nemandagu atsakyti trumpiniu ar laisvesniu žodžiu (pvz., „Sveiki“ ar „Labas“ vietoj atitinkamo formalaus atsakymo). Visada palaikykite akių kontaktą ir šiek tiek linktelėkite galvą.</li>
+            <li><strong>Neformalioje aplinkoje.</strong> Bendraujant su bendraamžiais, pasisveikinimas gali būti palaiduojamesnis. Į „Labas“ atsakykite tuo pačiu arba draugišku „Kaip laikaisi?“, nusišypsokite. Čia tinka atviresnė ir laisvesnė kūno kalba.</li>
+            <li><strong>Tinkamas pripažinimas (Acknowledgement).</strong> Kūno kalba atsakant yra kritiškai svarbi. Išgirdę pasisveikinimą, atgręžkite į tą asmenį veidą ir krūtinę. Jei sėdite ir atsakote formaliu pasisveikinimu (ypač su rankos paspaudimu), privaloma bent šiek tiek kilstelėti ar visiškai atsistoti.</li>
+            <li><strong>Tylūs koridoriaus prasilenkimai.</strong> Jei einate koridoriumi ir praeinate pro mokinį ar mokytoją, su kuriuo tą dieną jau sveikinotės, pakanka mandagiai, be žodžių linktelėti galvą ir nusišypsoti – taip parodote, kad jį matote ir gerbiate jo buvimą erdvėje.</li>
+            <li><strong>Ignoravimas – didžiausia klaida.</strong> Akių nuleidimas į telefoną, nusisukimas į šoną ar tiesiog tylėjimas girdint į jus nukreiptą pasisveikinimą, yra traktuojamas kaip grubiausia nepagarba.</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300 mt-8">Kaip elgtis kebliose situacijose?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Kartais sveikinantis pasitaiko nepatogių ar nejaukių momentų. Išlikite ramūs – tai nutinka visiems, o etiketas siūlo elegantiškas išeitis:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Pamiršote žmogaus vardą.</strong> Geriausia išeitis – būti nuoširdiems ir mandagiems, užuot bandžius laužyti galvą ar vengti kreipimosi ištisą pokalbį. Nusišypsokite ir pasakykite: <em>„Atsiprašau, žinau, kad mes esame pažįstami, bet šiuo metu iškrito tavo/jūsų vardas. Aš esu [Jūsų vardas].“</em> Žmonės kur kas labiau įvertina nuoširdumą nei apsimetinėjimą.</li>
+            <li><strong>Nežinote, kokį pasisveikinimo būdą pasirinkti.</strong> Sutikote pažįstamą ar tolimą giminaitį, bet abejojate, ar tiesti ranką, ar apsikabinti? Tokiu atveju visada padeda iniciatyvos perleidimas arba neutralumas. Šiltai nusišypsokite ir ištarkite žodinį pasisveikinimą išlaikydami patogų atstumą. Jei kitas žmogus ištiesia ranką ar žengia artyn apsikabinti – tiesiog atsakykite tuo pačiu.</li>
+            <li><strong>Nesusišnekėjimas (vienas tiesia ranką, kitas nori apsikabinti).</strong> Jei pasisveikinimo judesiai <em>susipyko</em>, jokiu būdu nepanikuokite. Tiesiog nusišypsokite, galite lengvai pasijuokti iš situacijos sakydami: <em>„Atrodo, mūsų signalai truputį susikirto!“</em> ir greitai pereiti prie neutralaus varianto (paspausti ranką ar tiesiog pasisveikinti žodžiu).</li>
+            <li><strong>Sutikote žmogų antrą kartą per dieną.</strong> Visiškai normalu dienos eigoje kelis kartus prasilenkti su tais pačiais žmonėmis. Antrą kartą nesakykite vėl pakilaus „Laba diena“. Užtenka linktelti galvą, nusišypsoti arba, jei situacija labai formali, ištarti trumpą mandagų komentarą (pvz., „Ir vėl susitinkame“).</li>
+          </ul>
         `
       },
       {
         id: 'appearance',
         title: 'Išvaizda ir apranga',
-        imageUrl: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Darbuotojų aprangos kodas</h3>
-          <p class="mb-4 text-gray-700">Progimnazijos darbuotojai savo išvaizda reprezentuoja įstaigą, todėl apranga turi būti:</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Darbuotojų aprangos kodas</h3>
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Dalykinė apranga" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Progimnazijos darbuotojai savo išvaizda reprezentuoja įstaigą, todėl apranga turi būti:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Tvarkinga ir švari.</strong> Laikomasi asmens higienos ir estetikos reikalavimų.</li>
             <li><strong>Etiška.</strong> Nedėvima provokuojanti apranga (gilios iškirptės, permatomi ar itin atviri rūbai).</li>
             <li><strong>Dalykiška.</strong> Apranga turi atitikti darbo pobūdį ir kurti pagarbią atmosferą.</li>
           </ul>
 
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Mokinių uniformos (1-8 kl.)</h3>
-          <p class="mb-4 text-gray-700">Mokiniai privalo dėvėti tvarkingą uniformą kiekvieną dieną.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Mokinių uniformos (1-8 kl.)</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Mokiniai privalo dėvėti tvarkingą uniformą kiekvieną dieną.</p>
           
-          <div class="bg-primary-50 p-4 rounded-lg border border-primary-100 mb-6">
-            <h4 class="font-bold text-primary-800 mb-2">Privalomos dalys:</h4>
-            <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
-              <li><strong>Viršus:</strong> Džemperis be gobtuvo (tamsiai žalias, pilkas, mėlynas, bordo) arba Polo marškinėliai (šviesiai pilki, mėlyni, violetiniai, balti) su mokyklos logotipu.</li>
-              <li><strong>Apačia:</strong> Vienspalvės juodos, pilkos ar mėlynos kelnės/džinsai (mergaitėms – ir sijonai).</li>
+          <div class="bg-primary-50 dark:bg-primary-900/20 p-4 rounded-lg border border-primary-100 dark:border-primary-800 mb-6">
+            <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">Privalomos dalys:</h4>
+            <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300 text-sm">
+              <li><strong>Viršus.</strong> Džemperis be gobtuvo (tamsiai žalias, pilkas, mėlynas, bordo) arba Polo marškinėliai (šviesiai pilki, mėlyni, violetiniai, balti) su mokyklos logotipu.</li>
+              <li><strong>Apačia.</strong> Vienspalvės juodos, pilkos ar mėlynos kelnės/džinsai (mergaitėms – ir sijonai).</li>
             </ul>
           </div>
 
-          <p class="mb-4 text-gray-700"><strong>Draudžiama:</strong> Sportinės kelnės (treningai), plėšyti džinsai, paplūdimio apranga, šlepetės, avalynė aukšta pakulne.</p>
+          <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Draudžiama.</strong> Sportinės kelnės (treningai), plėšyti džinsai, paplūdimio apranga, šlepetės, avalynė aukšta pakulne. Taip pat mokykloje labai nemandagu ir nepriimtina dėvėti drabužius, <strong>apnuoginančius juosmenį</strong> (pvz., trumpos palaidinės, „crop tops“), gilias iškirptes ar pernelyg trumpus sijonus.</p>
+          <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=800&q=80" alt="Tvarkinga avalynė" class="w-full h-48 object-cover rounded-xl mb-6 shadow-md" />
 
           <div class="flex flex-col gap-3 mt-6">
-            <a href="https://antakalnio.lt/progimnazija/uniformos" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 underline font-medium flex items-center">
+            <a href="https://antakalnio.lt/progimnazija/uniformos" target="_blank" rel="noopener noreferrer" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:text-primary-300 underline font-medium flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
               Informacija apie uniformas (antakalnio.lt)
             </a>
-            <a href="https://docs.google.com/document/d/1DdRpNCeNFYRQJhkY-SxjNCpAqTF0VNUPBO1pyVzB8bs/edit?tab=t.0" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 underline font-medium flex items-center">
+            <a href="https://docs.google.com/document/d/1DdRpNCeNFYRQJhkY-SxjNCpAqTF0VNUPBO1pyVzB8bs/edit?tab=t.0" target="_blank" rel="noopener noreferrer" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:text-primary-300 underline font-medium flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
               Uniformų dėvėjimo tvarkos aprašas
             </a>
@@ -182,41 +228,72 @@ export const TOPICS: Topic[] = [
         title: 'Aksesuarai ir etiketas',
         imageUrl: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Rankinės ir Pirštinės</h3>
-          <p class="mb-4 text-gray-700">Prie gatvėje dėvimų drabužių nešiokite spalviškai suderintą didesnę rankinę. Prie popiečio drabužių – nedidelį rankinuką, prie vakarinės suknelės – mažą krepšelį.</p>
-          <p class="mb-4 text-gray-700">Dama gatvėje nuolat mūvi pirštines. Prie vakarinės suknelės mūvimos pirštinės nusiimamos prie stalo. Namų šeimininkė, sveikindama svečius, niekada nemūvi pirštinių.</p>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Kvepalai</h3>
-          <p class="mb-4 text-gray-700">Būkite saikingi. Kvepalai neturi skelbti apie jūsų pasirodymą, o tik lydėti kaip šešėlis. Dieną vartokite tualetinį vandenį, vakare – kvepalus.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Rankinės ir Pirštinės</h3>
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80" alt="Stilinga rankinė" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Prie gatvėje dėvimų drabužių nešiokite spalviškai suderintą didesnę rankinę. Prie popiečio drabužių – nedidelį rankinuką, prie vakarinės suknelės – mažą krepšelį.</p>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Dama gatvėje nuolat mūvi pirštines. Prie vakarinės suknelės mūvimos pirštinės nusiimamos prie stalo. Namų šeimininkė, sveikindama svečius, niekada nemūvi pirštinių.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kvepalai</h3>
+          <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80" alt="Kvepalai" class="w-full h-48 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Būkite saikingi. Kvepalai neturi skelbti apie jūsų pasirodymą, o tik lydėti kaip šešėlis. Dieną vartokite tualetinį vandenį, vakare – kvepalus.</p>
         `
       },
       {
         id: 'public_transport',
-        title: 'Viešasis transportas',
-        imageUrl: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80',
+        title: 'Viešasis transportas ir išvykos',
+        imageUrl: 'https://images.unsplash.com/photo-1557223562-6c77ef16210f?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Moksleivio elgesys autobuse</h3>
-          <p class="mb-4 text-gray-700">Viešasis transportas – tai vieta, kur pasimato tavo mandagumas.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Moksleivio elgesys viešajame transporte</h3>
+          <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80" alt="Autobusas" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Viešasis transportas – tai vieta, kur pasimato tavo mandagumas ir sąmoningumas.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Saugumas stotelėje.</strong> Nestovėkite prie pat gatvės krašto (bordiūro), kad atvažiuojantis autobusas netyčia jūsų neužkabintų veidrodėliu. Visada palikite vietos išlipantiems keleiviams.</li>
+            <li><strong>Įlipimas ir išlipimas.</strong> Lipkite tik autobusui visiškai sustojus. Viduje nestovėkite prie pat durų, jei neketinate išlipti kitoje stotelėje – tai trukdo kitiems įlipti ir išlipti.</li>
             <li><strong>Užleisk vietą.</strong> Tai auksinė taisyklė. Pamatęs vyresnį žmogų, nėščią moterį ar tėvus su mažais vaikais – atsistok ir pasiūlyk atsisėsti.</li>
             <li><strong>Kuprinė.</strong> Įlipęs į autobusą, nusiimk kuprinę ir laikyk ją rankose arba pasidėk ant kelių (jei sėdi). Ant nugaros palikta kuprinė trukdo kitiems praeiti ir gali ką nors užgauti.</li>
-            <li><strong>Tyla.</strong> Muzikos klausykis tik su ausinėmis. Jei kalbi telefonu ar su draugu – daryk tai tyliai, kad visas autobusas negirdėtų tavo paslapčių.</li>
+            <li><strong>Ausinės ir aplinka.</strong> Muzikos klausykis tik su ausinėmis, tačiau svarbu girdėti aplinkinių prašymus (pvz., praleisti) ar vairuotojo pranešimus. Būk budrus!</li>
             <li><strong>Maistas.</strong> Autobuse nevalgome ledų, kebabų ar kito tepančio maisto.</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Elgesys mokyklos išvykose</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Važiuojant užsakytu autobusu į ekskursiją galioja griežtesnės saugumo taisyklės.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Saugos diržai.</strong> Vos atsisėdus, privaloma prisisegti saugos diržą. Tai ne rekomendacija, o įstatymas ir jūsų saugumo garantas.</li>
+            <li><strong>Jokio vaikščiojimo.</strong> Autobusui važiuojant griežtai draudžiama stotis ar vaikščioti po saloną. Tai pavojinga staigiai stabdant.</li>
+            <li><strong>Pagalbos prašymas.</strong> Jei pasijutote blogai, pykina ar reikia sustoti į tualetą, nelaukite paskutinės minutės. Pakelkite ranką arba garsiai, bet mandagiai kreipkitės į mokytoją ar vairuotoją: „Atsiprašau, man negera, ar galėtume sustoti?“. Nereikia gėdytis – tai natūralu.</li>
+            <li><strong>Švara.</strong> Išlipdami iš autobuso, susirinkite visas savo šiukšles. Palikite vietą tokią, kokią radote.</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Svečiuose (lankantis kito namuose)</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Nesvarbu, ar tai draugo gimtadienis, ar klasės draugų susitikimas – lankantis kito namuose galioja svarbios bendravimo ir atsakomybės taisyklės:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Punktualumas.</strong> Nevėluokite (leistina iki 10–15 minučių) ir neatvykite pernelyg anksti, kad nesutrukdytumėte šeimininkams besiruošiant.</li>
+            <li><strong>Dovanėlė.</strong> Atvykstant į svečius mandagu atnešti nedidelę lauktuvę, pavyzdžiui, skanėstą prie arbatos. Taip parodote dėkingumą už kvietimą.</li>
+            <li><strong>Pagalba šeimininkams.</strong> Pasisiūlykite padėti padengti stalą ar nunešti indus – tai parodo jūsų rūpestį ir palengvina šventės ruošą.</li>
+            <li><strong>Namų taisyklės.</strong> Gerbkite draugo namų taisykles: nusiaukite batus, nerėkaukite ir nevaikščiokite po kambarius be leidimo ar kvietimo.</li>
           </ul>
         `
       },
       {
         id: 'hygiene',
         title: 'Asmens higiena',
-        imageUrl: 'https://images.unsplash.com/photo-1584634731339-252c581abfc5?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Švara – mandagumo dalis</h3>
-          <p class="mb-4 text-gray-700">Tvarkinga išvaizda rodo pagarbą sau ir aplinkiniams.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-            <li><strong>Rankos.</strong> Plauk rankas prieš valgį, pasinaudojęs tualetu ir grįžęs iš lauko. Tai pagrindinė taisyklė saugant sveikatą.</li>
-            <li><strong>Čiaudėjimo etiketas.</strong> Jei neturi nosinės, čiaudėk ar kosėk ne į delną, o į sulenktą alkūnę. Taip mikrobai nepateks ant rankų, kuriomis lieti daiktus ar sveikini draugus.</li>
-            <li><strong>Nagai.</strong> Jie turi būti švarūs ir tvarkingai nukarpyti. Nagų kramtymas – nemalonus įprotis, kurio reikėtų atsikratyti.</li>
-            <li><strong>Plaukai.</strong> Plaukai turi būti švarūs ir sušukuoti. Svarbu: niekada nesikeisk šukomis ar kepurėmis su draugais, kad išvengtum utėlių (pedikuliozės). Jei taip nutiko – lik namuose ir gydykis, tai ne gėda, o liga.</li>
-            <li><strong>Apranga.</strong> Drabužiai turi būti švarūs ir tvarkingi. Mokykloje venk iššaukiančios aprangos.</li>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Švara – mandagumo dalis</h3>
+          <img src="https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=800&q=80" alt="Rankų plovimas su muilu" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tvarkinga išvaizda rodo pagarbą sau ir aplinkiniams. Mūsų kūnas keičiasi, todėl švara tampa vis svarbesnė.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Maudymasis.</strong> Prauskitės po dušu ar vonioje kasdien. Taip pat nepamirškite kasdien nuplauti veido bei pasivalyti dantų bent du kartus dienoje ir naudoti dantų siūlą. Skirtingam plaukų tipui reikia skirtingos priežiūros – plaukite juos pagal poreikį, kad atrodytų sveiki.</li>
+            <li><strong>Bendras vonios kambarys.</strong> Jei dalinatės vonios kambariu su kitais šeimos nariais, nepraleiskite ten visos amžinybės ir taupykite karštą vandenį! Po savęs palikite švarą: nušluostykite prilaisčius vandens, nuleiskite klozeto dangtį, pakabinkite rankšluostį, nuskalaukite kriauklę (dantų pastos likučius).</li>
+            <li><strong>Čiaudėjimo ir kosėjimo etiketas.</strong> Saugiausia ir mandagiausia čiaudėti ar kosėti į vienkartinę nosinaitę, o jos neturint – <strong>į sulenktą vidinę rankos alkūnę</strong>. Niekada nečiaudėkite į delnus (kad neperneštumėte mikrobų ant paviršių ar pasisveikinant). Marškinių rankovė išorėje NĖRA servetėlė nosiai nusišluostyti – visada nešiokitės vienkartinių nosinaičių.</li>
+            <li><strong>Kaip reaguoti į čiaudulį.</strong> Nusičiaudėjus pačiam, reikėtų tyliai pasakyti <em>„Atsiprašau“</em>. O kaip reaguoti, kai nusičiaudi kitas? Šiuolaikinis oficialus etiketas pataria tiesiog <strong>nepastebėti ir nekomentuoti</strong>, ypač viešumoje ar klasėje, kad neatkreiptumėte nereikalingo dėmesio. Visgi, artimų draugų ar šeimos rate palinkėti <em>„Į sveikatą!“</em> yra gražus, šiltas gestas.</li>
+            <li><strong>Rankų higiena.</strong> Dažnai plaukite rankas – prieš valgį, pasinaudoję tualetu, grįžę namo ar pabuvę viešajame transporte.</li>
+            <li><strong>Apranga.</strong> Drabužiai turi būti švarūs. Net jei labai mėgstate konkretų rūbą, jei jis nešvarus, nesivilkite ir tiesiog jį išskalbkite arba palaukite, kol išskalbs tėvai.</li>
+          </ul>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Valgymo kultūra</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Valgymas pamokų metu.</strong> Pamokų metu valgyti negalima. Tai blaško tave ir kitus, be to, trupiniai ir kvapai klasėje yra nepageidaujami. Užkandžiauk per pertraukas.</li>
+            <li><strong>Kalbėjimas pilna burna.</strong> Niekada nekalbėk kramtydamas. Tai neestetiška ir nemandagu. Pirma nuryk kąsnį, tada kalbėk.</li>
+            <li><strong>Kramtomoji guma.</strong> Kramtyti gumą kalbant su kitu žmogumi ar pamokos metu yra nepagarba. Jei kramtai gumą, daryk tai diskretiškai (užsičiaupęs) ir tik ne pamokų ar oficialių pokalbių metu. Išspjauk ją į šiukšliadėžę, o ne po suolu!</li>
           </ul>
         `
       },
@@ -225,12 +302,59 @@ export const TOPICS: Topic[] = [
         title: 'Kalbos kultūra',
         imageUrl: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Žodžiai turi galią</h3>
-          <p class="mb-4 text-gray-700">Tavo kalba pasako apie tave daugiau nei apranga.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Žodžiai turi galią</h3>
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80" alt="Bendravimas" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tavo kalba pasako apie tave daugiau nei apranga.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Keiksmažodžiai.</strong> Keiksmai nerodo „kietumo“, jie rodo skurdų žodyną ir nepagarbą aplinkiniams. Mandagus žmogus randa kitų būdų emocijoms išreikšti.</li>
             <li><strong>Atsiprašymas.</strong> Jei netyčia nusikeikei ar pasakei kažką nemalonaus, svarbu atsiprašyti. Sakyk: „Atsiprašau, man išsprūdo“ arba „Atsiprašau, nenorėjau to pasakyti“.</li>
             <li><strong>Stebuklingi žodžiai.</strong> „Ačiū“, „Prašau“, „Laba diena“, „Viso gero“ – šie žodžiai atidaro visas duris.</li>
+          </ul>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kaip reaguoti į nepagarbą?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Jei girdi keiksmažodžius ar matai nepagarbų elgesį:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Neprisidėk.</strong> Niekada neatsakyk tuo pačiu. Jei tave įžeidė, geriausias atsakas – ramybė ir pasitraukimas.</li>
+            <li><strong>Pasakyk „Ne“.</strong> Jei draugai keikiasi, gali ramiai pasakyti: „Man nepatinka tokie žodžiai“ arba „Prašau prie manęs nesikeikti“.</li>
+            <li><strong>Ignoruok.</strong> Kartais geriausia reakcija į provokaciją yra tiesiog jos nepastebėti.</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Neverbalinis bendravimas</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tai viskas, ką pasakome nenaudodami žodžių. Tyrimai rodo, kad bendraujant akis į akį, daugiau nei 60–90 % informacijos perduodama būtent per kūno kalbą, toną ir gestus. Tai „tylioji kalba“, kuri dažnai yra nuoširdesnė už ištartus žodžius.</p>
+          
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">1. Kūno kalba (Kinezika)</h4>
+          <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700 dark:text-gray-300">
+            <li><strong>Laikysena.</strong> Atvira laikysena (nesukryžiuotos rankos) rodo pasitikėjimą ir palankumą; susigūžimas – gynybinę poziciją.</li>
+            <li><strong>Gestai.</strong> Rankų judesiai gali sustiprinti mintį, tačiau perteklinis gestikuliavimas gali rodyti nerimą.</li>
+            <li><strong>Mėgdžiojimas (Mirroring).</strong> Jei pašnekovas subtiliai atkartoja jūsų pozą, tai dažniausiai reiškia, kad jis jaučia jums empatiją arba pritaria jūsų nuomonei.</li>
+          </ul>
+
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">2. Veido išraiškos ir akių kontaktas</h4>
+          <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700 dark:text-gray-300">
+            <li><strong>Mikroišraiškos.</strong> Akimirksniu pasirodančios tikrosios emocijos (pvz., trumpas lūpų virptelėjimas), kurias sunku suklastoti.</li>
+            <li><strong>Akių kontaktas.</strong> Tiesioginis žvilgsnis rodo susidomėjimą, tačiau per ilgas spoksojimas gali būti suvokiamas kaip agresija. Vengimas žiūrėti į akis dažnai signalizuoja apie nepatogumą ar nesaugumą.</li>
+          </ul>
+
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">3. Paralingvistika (Balso savybės)</h4>
+          <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700 dark:text-gray-300">
+            <li><strong>Tonis ir aukštis.</strong> Pakeltas tonas gali reikšti pyktį arba susijaudinimą.</li>
+            <li><strong>Tempas.</strong> Greita kalba dažnai išduoda nervingumą, o lėta ir rami – autoritetą.</li>
+            <li><strong>Pauzės.</strong> Jos gali būti naudojamos pabrėžti svarbią mintį arba rodyti dvejones.</li>
+          </ul>
+
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">4. Proksemika (Erdvės pojūtis)</h4>
+          <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700 dark:text-gray-300">
+            <li><strong>Intymioji zona (iki 45 cm).</strong> Skirta tik artimiausiems.</li>
+            <li><strong>Asmeninė zona (45 cm – 1,2 m).</strong> Draugiškiems pokalbiams.</li>
+            <li><strong>Socialinė zona (1,2 m – 3,6 m).</strong> Darbo reikalams ir nepažįstamiems.</li>
+          </ul>
+
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">Kodėl tai svarbu?</h4>
+          <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Auksinė taisyklė.</strong> Jei žmogaus žodžiai prieštarauja jo kūno kalbai (pvz., sako „aš nesijaudinu“, bet trepsi koja), mes pasąmoningai labiau tikime kūno kalba.</p>
+
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">Patarimai geresniam bendravimui:</h4>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Stebėkite visumą.</strong> Vienas gestas (pvz., sukryžiuotos rankos) gali reikšti tiesiog tai, kad žmogui šalta. Išvadas darykite matydami bent kelis ženklus vienu metu.</li>
+            <li><strong>Kontroliuokite save.</strong> Sąmoningai atpalaiduoti pečiai ir švelni šypsena padeda ne tik pašnekovui pasijusti geriau, bet ir jums patiems nusiraminti.</li>
           </ul>
         `
       },
@@ -239,27 +363,36 @@ export const TOPICS: Topic[] = [
         title: 'Pagarbus elgesys',
         imageUrl: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Konfliktinės situacijos</h3>
-          <p class="mb-4 text-gray-700">Kaip elgtis, kai aplink tvyro įtampa?</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Konfliktinės situacijos</h3>
+          <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=800&q=80" alt="Pagalba draugui" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Kaip elgtis, kai aplink tvyro įtampa?</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Rėkimas.</strong> Jei matai rėkiantį mokytoją ar mokinį – neįsitrauk į konfliktą ir nerėk atgal. Išlik ramus. Jei situacija pavojinga ar nuolatinė, būtinai pasakyk tėvams arba mokyklos psichologui.</li>
             <li><strong>Apkalbos.</strong> Jei girdėjai, kaip kažkas viešai apkalba mokinį ar mokytoją, neprisidėk prie to. Geriausia reakcija – pasakyti „Man nepatinka apkalbos“ arba tiesiog nueiti. Apkalbos žemina tą, kuris apkalba.</li>
             <li><strong>Pagalba.</strong> Jei matai, kad kažkas skriaudžiamas, nelik abejingas. Pakviesk suaugusįjį.</li>
           </ul>
 
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Sportinis etiketas</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Pagarba yra svarbi ne tik klasėje ar namuose, bet ir sportuojant:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Garbingas žaidimas.</strong> Visada laikykitės žaidimo taisyklių, nežaiskite nešvariai. Svarbiausia – garbingas varžymasis.</li>
+            <li><strong>Mokėti pralaimėti (ir laimėti).</strong> Tikras sportininkas moka oriai pralaimėti – pasveikina varžovus ir neieško pasiteisinimų. Taip pat svarbu mokėti ir laimėti: nesityčioti iš pralaimėjusių, nesišaipyti, o elgtis pagarbiai.</li>
+            <li><strong>Pagarba teisėjams ir priešininkams.</strong> Gerbkite teisėjų sprendimus net jei su jais nesutinkate. Palaikomųjų rungtynių metu stadione taip pat nerėkaukite įžeidinėjimų priešininkų komandai – kultūra privalo išlikti ir tribūnose.</li>
+          </ul>
+
           <div class="mt-8 grid gap-4 md:grid-cols-2">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfz-k14DibU7M8GBV4OkGULyHrRHw6vadfdDTnNbsAveJTW7w/viewform" target="_blank" rel="noopener noreferrer" class="flex items-center p-4 bg-red-50 rounded-lg border border-red-100 hover:bg-red-100 transition-colors group shadow-sm">
-              <div class="mr-3 bg-white p-2 rounded-full text-red-500 group-hover:text-red-600 shadow-sm">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfz-k14DibU7M8GBV4OkGULyHrRHw6vadfdDTnNbsAveJTW7w/viewform" target="_blank" rel="noopener noreferrer" class="flex items-center p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 hover:bg-red-100 transition-colors group shadow-sm">
+              <div class="mr-3 bg-white dark:bg-slate-800 p-2 rounded-full text-red-500 group-hover:text-red-600 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
               </div>
               <div>
-                <h4 class="font-bold text-red-800 text-sm">Pranešk apie patyčias</h4>
+                <h4 class="font-bold text-red-800 dark:text-red-300 text-sm">Pranešk apie patyčias</h4>
                 <p class="text-xs text-red-600 mt-1">Anoniminė forma</p>
               </div>
             </a>
 
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScCMuGJFcTpZzRm4R4zQJfU1FWPtqC-ZtwcIyvycL3BnNZevw/viewform" target="_blank" rel="noopener noreferrer" class="flex items-center p-4 bg-amber-50 rounded-lg border border-amber-100 hover:bg-amber-100 transition-colors group shadow-sm">
-              <div class="mr-3 bg-white p-2 rounded-full text-amber-500 group-hover:text-amber-600 shadow-sm">
+              <div class="mr-3 bg-white dark:bg-slate-800 p-2 rounded-full text-amber-500 group-hover:text-amber-600 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               </div>
               <div>
@@ -284,18 +417,58 @@ export const TOPICS: Topic[] = [
         title: 'Teatras ir kinas',
         imageUrl: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Punktualumas</h3>
-          <p class="mb-4 text-gray-700">Į teatrą ar kiną vėluoti nemandagu. Į teatro salę po trečio skambučio žiūrovai dažniausiai neįleidžiami iki pertraukos.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Punktualumas</h3>
+          <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80" alt="Kino teatras" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Į teatrą ar kiną vėluoti nemandagu. Į teatro salę po trečio skambučio žiūrovai dažniausiai neįleidžiami iki pertraukos.</p>
           
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Ėjimas į savo vietą</h3>
-          <p class="mb-4 text-gray-700">Jei tenka praeiti pro jau sėdinčius žiūrovus, visada eikite <strong>veidu į juos</strong> (nugara į sceną/ekraną). Atsiprašykite už sutrukdymą.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Ėjimas į savo vietą</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Jei tenka praeiti pro jau sėdinčius žiūrovus, visada eikite <strong>veidu į juos</strong> (nugara į sceną/ekraną). Atsiprašykite už sutrukdymą.</p>
           
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Telefonai ir maistas</h3>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Telefonai ir maistas</h3>
+          <img src="https://images.unsplash.com/photo-1585647347483-22b66260dfff?auto=format&fit=crop&w=800&q=80" alt="Užkandžiai kine" class="w-full h-48 object-cover rounded-xl mb-6 shadow-md" />
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Telefonai.</strong> Privalo būti išjungti arba nustatyti begarsiu režimu. Ekrano šviesa tamsoje trukdo kitiems labiau nei garsas.</li>
             <li><strong>Maistas.</strong> Teatre salėje nevalgoma. Kine užkandžiauti priimta, tačiau venkite čežančių pakuočių ir stiprių kvapų.</li>
           </ul>
         `
+      },
+      {
+        id: 'public_spaces',
+        title: 'Pagarba viešose erdvėse: muzika ir triukšmas',
+        imageUrl: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80',
+        content: `
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Muzika ir ausinės</h3>
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Muzika su ausinėmis" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Muzika yra puikus būdas atsipalaiduoti, tačiau viešumoje ji neturi trukdyti kitiems. Svarbu prisiminti:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Garso lygis.</strong> Jei tavo muziką girdi šalia sėdintis žmogus – vadinasi, ji per garsi. Tai ne tik nemandagu, bet ir kenkia tavo klausai.</li>
+            <li><strong>Ausinės.</strong> Viešajame transporte, laukiamuosiuose ar bibliotekoje visada naudok ausines. Niekada neleisk muzikos per telefono garsiakalbį.</li>
+            <li><strong>Saugumas.</strong> Eidamas per gatvę ar važiuodamas dviračiu, nusiimk bent vieną ausinę, kad girdėtum aplinką.</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Tyla viešose vietose</h3>
+          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80" alt="Biblioteka" class="w-full h-48 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Bibliotekos, laukiamieji, ligoninės ir viešasis transportas yra bendros erdvės, kuriose visi nori jaustis patogiai. Triukšmas sukelia stresą ir vargina aplinkinius.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Bibliotekos.</strong> Čia tyla yra šventa. Kalbėkite tik pašnibždomis, telefoną laikykite begarsiu režimu.</li>
+            <li><strong>Laukiamieji ir ligoninės.</strong> Gerbkite kitų privatumą ir ramybę. Venkite garsių pokalbių telefonu ar juoko.</li>
+            <li><strong>Viešasis transportas.</strong> Tai ne vieta koncertams ar garsiems ginčams. Jei kalbate telefonu, darykite tai trumpai ir tyliai.</li>
+          </ul>
+        `,
+        scenarios: [
+          {
+            role: 'student',
+            situation: 'Važiuojate autobusu ir norite paklausyti naujos dainos, bet pamiršote ausines.',
+            action: 'Neklausykite muzikos per garsiakalbį. Palaukite, kol grįšite namo, arba klausykite labai tyliai priglaudę telefoną prie ausies (jei tai netrukdo kitiems).',
+            explanation: 'Muzika per garsiakalbį viešajame transporte yra vienas didžiausių etiketo pažeidimų, rodantis nepagarbą kitiems keleiviams.'
+          },
+          {
+            role: 'employee',
+            situation: 'Laukiate priėmimo pas gydytoją bendroje eilėje ir jums skambina kolega aptarti darbo reikalų.',
+            action: 'Atsiliepkite tyliai, pasakykite, kad esate viešoje vietoje, ir susitarkite perskambinti vėliau. Jei pokalbis skubus – išeikite į koridorių ar lauką.',
+            explanation: 'Kitiems žmonėms nereikia (ir nemalonu) klausytis jūsų darbo detalių ar asmeninių problemų.'
+          }
+        ]
       }
     ]
   },
@@ -310,7 +483,7 @@ export const TOPICS: Topic[] = [
       {
         id: 'business_intro',
         title: 'Verslo etiketo pagrindai',
-        imageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80',
         audioPhrases: [
           { phrase: "Ačiū, kad skyrėte laiko", lang: "lt-LT", label: "Padėka (LT)" },
           { phrase: "Thank you for your time", lang: "en-US", label: "Padėka (EN)" },
@@ -318,23 +491,37 @@ export const TOPICS: Topic[] = [
           { phrase: "Excuse me, may I ask?", lang: "en-US", label: "Mandagus įsiterpimas (EN)" }
         ],
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Pirmasis įspūdis</h3>
-          <p class="mb-4 text-gray-700">Verslo pasaulyje, kaip ir mokykloje, pirmasis įspūdis yra labai svarbus. Tai tinka tiek darbo pokalbiams, tiek egzaminams, pristatymams ar susitikimams su mokyklos administracija.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Pirmasis įspūdis</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Verslo pasaulyje, kaip ir mokykloje, pirmasis įspūdis yra labai svarbus. Tai tinka tiek darbo pokalbiams, tiek egzaminams, pristatymams ar susitikimams su mokyklos administracija.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Punktualumas.</strong> Vėlavimas rodo nepagarbą kito laikui. Į pamokas, egzaminus ar susitikimus su direktoriumi visada ateikite laiku.</li>
             <li><strong>Prisistatymas.</strong> Aiškiai ištarkite savo vardą ir pavardę. Tai rodo pasitikėjimą savimi, ypač bendraujant su naujais mokytojais ar svečiais.</li>
             <li><strong>Laikysena.</strong> Tiesus stuburas ir atviras žvilgsnis rodo, kad esate pasiruošę bendradarbiauti ir klausytis.</li>
           </ul>
-        `
+        `,
+        scenarios: [
+          {
+            role: 'student',
+            situation: 'Vėluojate į svarbų susitikimą su mokyklos direktoriumi dėl nenumatytų aplinkybių.',
+            action: 'Jei įmanoma, praneškite iš anksto. Atėję atsiprašykite trumpai, nepasakokite ilgų istorijų ir padėkokite, kad vis tiek jus priėmė.',
+            explanation: 'Vėlavimas yra nemandagus, bet gebėjimas prisiimti atsakomybę ir nešvaistyti kito laiko pasiteisinimais yra vertinamas.'
+          },
+          {
+            role: 'employee',
+            situation: 'Pirmą kartą susitinkate su nauju kolega ar partneriu.',
+            action: 'Atsistokite, nusišypsokite, tvirtai paspauskite ranką ir aiškiai pasakykite savo vardą bei pareigas. Palaikykite akių kontaktą.',
+            explanation: 'Tvirtas, bet ne per stiprus rankos paspaudimas ir akių kontaktas kuria pasitikėjimą nuo pat pirmos akimirkos.'
+          }
+        ]
       },
       {
         id: 'business_dress',
         title: 'Dalykinė apranga',
         imageUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Aprangos kodai</h3>
-          <p class="mb-4 text-gray-700">Tinkama apranga rodo profesionalumą. Tai svarbu ne tik darbe, bet ir mokyklos renginiuose, egzaminuose ar atstovaujant mokyklą olimpiadose.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Aprangos kodai</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tinkama apranga rodo profesionalumą. Tai svarbu ne tik darbe, bet ir mokyklos renginiuose, egzaminuose ar atstovaujant mokyklą olimpiadose.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Business Formal (Oficiali).</strong> Tamsus kostiumas, balti marškiniai (vyrams). Kostiumėlis (moterims). Tinka egzaminams, išleistuvėms, oficialiems minėjimams ar susitikimams su svarbiais svečiais.</li>
             <li><strong>Business Casual (Kasdienė dalykinė).</strong> Tvarkinga apranga be griežtų reikalavimų. Mokytojams tai kasdienė darbo apranga, mokiniams – tvarkinga uniforma.</li>
             <li><strong>Smart Casual (Puošni kasdienė).</strong> Tvarkingi džinsai su švarku ar marškiniais. Tinka neformaliems susitikimams, klasės šventėms ar ekskursijoms.</li>
@@ -342,13 +529,36 @@ export const TOPICS: Topic[] = [
         `
       },
       {
+        id: 'hosting_etiquette',
+        title: 'Svečiuose ir priimant svečius',
+        imageUrl: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=800&q=80',
+        content: `
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Svečiavimosi planavimas</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Papildomi svečiai.</strong> Prieš atsivesdami papildomą draugą ar šeimos narį į vakarėlį ar vakarienę, privalote iš anksto paklausti ir gauti šeimininko sutikimą. Be įspėjimo atsivesti daugiau žmonių yra didžiulė nepagarba.</li>
+            <li><strong>Atšaukimas dėl ligos.</strong> Jei anksčiau dieną blogai pasijutote ir nusprendėte nedalyvauti vakaro renginyje, privalote kuo greičiau paskambinti ir informuoti šeimininką.</li>
+          </ul>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kaip elgtis atvykus į svečius?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Geras svečias palieka malonų įspūdį ir yra laukiamas vėl. Štai svarbiausios taisyklės lankantis kito namuose:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Punktualumas.</strong> Niekada nevėluokite, bet ir neatvykite per anksti. Jei atvyksite anksčiau, šeimininkai dar gali būti nepasiruošę (optimalu nevėluoti daugiau nei 10-15 minučių).</li>
+            <li><strong>Dovanėlė šeimininkams.</strong> Atvykstant į svečius (ypač pirmą kartą arba kviečiant pietų ar nakvynei) priimta atnešti nedidelę dovanėlę, pavyzdžiui, gėlių, desertą prie arbatos ar šokoladą, kaip padėką už kvietimą.</li>
+            <li><strong>Laikykitės namų taisyklių ir dienotvarkės.</strong> Kiekvieni namai turi savo taisykles. Eidami miegoti laikykitės šeimininkų ritmo, ryte kelkitės tuomet, kai keliasi jie. Pasiklokite lovą, sutvarkykite kambarį ir pasikabinkite rankšluostį vonioje.</li>
+            <li><strong>Nekritikuokite ir nelyginkite.</strong> Būdami svečiuose niekada nesakykite: „Mūsų namuose mes darome ne taip...“ ar „Pas mus skaniau...“. Tai skamba tarsi priekaištas ir verčia šeimininkus jaustis prastai.</li>
+            <li><strong>Nesmalsaukite.</strong> Gerbkite kitų privatumą. Nekaitaliokite TV kanalų be atsiklausimo, nevaikščiokite po kambarius laisvai, neatidarinėkite spintų, stalčių ar šaldytuvo, jei nesate pakviesti. Nereikalaukite užkandžių – palaukite, kol pasiūlys.</li>
+            <li><strong>Pagalba šeimininkams.</strong> Mandagu pasisiūlyti padėti, pavyzdžiui, padengti stalą, nunešti lėkštes po valgio į virtuvę. Taip parodysite, kad nesate tik aptarnaujamas svečias, bet ir dėmesingas draugas.</li>
+          </ul>
+        `
+      },
+      {
         id: 'business_meetings',
         title: 'Susitikimų valdymas',
-        imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Efektyvūs susitikimai</h3>
-          <p class="mb-4 text-gray-700">Mokinių tarybos posėdžiai, grupiniai projektai ar klasės valandėlės taip pat yra „verslo susitikimai“, kuriuose galioja tos pačios taisyklės.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Efektyvūs susitikimai</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Mokinių tarybos posėdžiai, grupiniai projektai ar klasės valandėlės taip pat yra „verslo susitikimai“, kuriuose galioja tos pačios taisyklės.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Darbotvarkė.</strong> Žinokite, ką aptarsite (pvz., projektų temos, renginio planavimas). Tai taupo visų laiką.</li>
             <li><strong>Klausymasis.</strong> Nepertraukinėkite. Išklausykite kitų nuomonę, net jei nesutinkate. Tai ypač svarbu dirbant komandoje.</li>
             <li><strong>Užrašai.</strong> Užsirašykite svarbiausius sprendimus ir kas už ką atsakingas (pvz., kas atneš plakatus, kas paruoš pristatymą).</li>
@@ -366,10 +576,10 @@ export const TOPICS: Topic[] = [
           { phrase: "I look forward to hearing from you", lang: "en-US", label: "Pabaiga (EN)" }
         ],
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">El. laiškų etiketas</h3>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">El. laiškų etiketas</h3>
           <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=800&q=80" alt="Darbas kompiuteriu" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
-          <p class="mb-4 text-gray-700">Rašytinė komunikacija su mokytojais, administracija ar būsimais darbdaviais turi būti profesionali ir aiški.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Rašytinė komunikacija su mokytojais, administracija ar būsimais darbdaviais turi būti profesionali ir aiški.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Tema.</strong> Turi būti konkreti (pvz., „Dėl matematikos kontrolinio“, „Dėl praktikos vietos“, „8a klasės išvyka“).</li>
             <li><strong>Kreipinys.</strong> „Laba diena, Mokytojau“, „Gerb. Direktoriau“. Venkite „Sveiki“ oficialiuose laiškuose vyresniems asmenims, nebent jau esate sutarę dėl laisvesnio bendravimo.</li>
             <li><strong>Rašyba.</strong> Visada pasitikrinkite klaidas. Tai rodo atidumą ir pagarbą gavėjui.</li>
@@ -388,69 +598,190 @@ export const TOPICS: Topic[] = [
     imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80',
     lessons: [
       {
+        id: 'academic_integrity',
+        title: 'Akademinis sąžiningumas',
+        imageUrl: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
+        content: `
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kas yra akademinis sąžiningumas?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tai vertybė, kuri reiškia, kad visi darbai, kuriuos atliekate (kontroliniai, projektai, namų darbai), yra atlikti jūsų pačių, sąžiningai ir be apgaulės.</p>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Dažniausi pažeidimai</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Nusirašinėjimas.</strong> Svetimų atsakymų kopijavimas per kontrolinį ar namų darbus. Tai rodo nepagarbą sau ir savo pastangoms.</li>
+            <li><strong>Plagijavimas.</strong> Svetimo teksto ar idėjų pateikimas kaip savo, nenurodant autoriaus. Jei naudojate informaciją iš interneto, visada nurodykite šaltinį.</li>
+            <li><strong>„Šperos“.</strong> Neleistinų paruoštukių naudojimas. Tai trumpalaikė nauda, kuri trukdo išmokti ir suprasti medžiagą.</li>
+            <li><strong>Pagalba kitiems sukčiauti.</strong> Leidimas nusirašyti yra toks pat pažeidimas kaip ir pats nusirašinėjimas.</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kodėl verta būti sąžiningam?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Sąžiningumas kuria pasitikėjimą. Mokytojai vertina pastangas ir klaidas labiau nei tobulą, bet nesąžiningą darbą. Be to, tik savarankiškai atliktas darbas suteikia tikrų žinių, kurios pravers ateityje.</p>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Dirbtinis intelektas (DI)</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">DI įrankiai (kaip ChatGPT, Gemini) gali būti puikūs pagalbininkai mokantis, tačiau svarbu juos naudoti atsakingai:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Pagalba, ne pakaitalas.</strong> Naudok DI idėjoms generuoti, paaiškinimams gauti ar klaidoms taisyti, bet ne visam darbui už tave parašyti.</li>
+            <li><strong>Kritinis mąstymas.</strong> DI gali klysti. Visada tikrink informaciją ir nepasitikėk aklai.</li>
+            <li><strong>Sąžiningumas.</strong> Jei naudojai DI rengdamas darbą, visada tai nurodyk. Pateikti DI sugeneruotą tekstą kaip savo yra plagijavimas.</li>
+          </ul>
+        `
+      },
+      {
         id: 'teacher_room',
         title: 'Mokytojų kambarys ir kabinetai',
         imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Mokytojų kambarys – mokytojų poilsio zona</h3>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Mokytojų kambarys – mokytojų poilsio zona</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Beldimas.</strong> Prieš įeinant į kabinetą ar mokytojų kambarį, būtina pasibelsti ir palaukti leidimo įeiti.</li>
             <li><strong>Pertraukos.</strong> Mokytojų kambarys yra vieta, kur mokytojai ilsisi ir ruošiasi pamokoms. Mokiniai čia turėtų užeiti tik esant svarbiam reikalui.</li>
             <li><strong>Pagarba.</strong> Įėjus būtina pasisveikinti su visais esančiais mokytojais, ne tik su tuo, kurio ieškote.</li>
           </ul>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Kabineto kultūra</h3>
-          <p class="mb-4 text-gray-700">Kabinetas yra mokymosi erdvė. Nelieskite mokytojo stalo, kompiuterio ar asmeninių daiktų be leidimo. Išeidami palikite savo darbo vietą tvarkingą.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kabineto kultūra</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Kabinetas yra mokymosi erdvė. Nelieskite mokytojo stalo, kompiuterio ar asmeninių daiktų be leidimo. Išeidami palikite savo darbo vietą tvarkingą.</p>
         `
       },
       {
         id: 'student_teacher_comm',
         title: 'Mokinio ir mokytojo bendravimas',
-        imageUrl: 'https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Kreipiniai</h3>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-            <li>Į mokytojus kreipiamės „Jūs“ ir „Mokytojau / Mokytoja“.</li>
-            <li>Venkite familiaraus tono, net jei mokytojas jaunas ar bendrauja laisviau.</li>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Prasmingas bendravimas</h3>
+          <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&w=800&q=80" alt="Mokinys ir mokytojas" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tai daugiau nei pamoka. Tai abipusė pagarba, noras suprasti ir augti kartu. Prasmingas ryšys kuriamas, kai abi pusės jaučiasi saugios ir vertinamos.</p>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Ar mokytojas gali būti draugas?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Mokytojas yra mentorius, vadovas ir pagalbininkas. Nors bendravimas gali būti šiltas, atviras ir draugiškas, svarbu išlaikyti <strong>profesionalias ribas</strong>. Mokytojas nėra „draugelis“ – toks atstumas būtinas, kad vertinimas išliktų objektyvus, o mokinys jaustųsi saugiai žinodamas taisykles.</p>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kaip susikalbėti?</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Kaip paklausti?</strong> Pradėkite mandagiai: „Atsiprašau, ar galėčiau pasitikslinti?“ arba „Norėčiau paklausti dėl...“.</li>
+            <li><strong>Kaip paprašyti?</strong> Naudokite „Aš“ kalbą: „Būčiau dėkingas, jei paaiškintumėte dar kartą“ vietoj reikalavimo „Paaiškinkite“.</li>
+            <li><strong>Kaip neįžeisti?</strong> Venkite kaltinimų („Jūs blogai išaiškinote“). Sakykite apie savo patirtį: „Aš nesupratau šios dalies, man sunku įveikti šią užduotį“.</li>
+            <li><strong>Kaip išgirsti?</strong> Klausykitės ne tam, kad atsakytumėte, o tam, kad suprastumėte. Nepertraukinėkite ir leiskite mokytojui baigti mintį.</li>
           </ul>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Diskusijos ir klausimai</h3>
-          <p class="mb-4 text-gray-700">Klausti ir diskutuoti yra skatinama, tačiau tai daryti reikia mandagiai. Pakelkite ranką, nepertraukinėkite. Jei nesutinkate su vertinimu, aptarkite tai po pamokos ramiai ir argumentuotai, o ne emocingai prieš visą klasę.</p>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">KĄ SAKO KŪNAS?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tai viskas, ką pasakome nenaudodami žodžių. Tyrimai rodo, kad bendraujant akis į akį, daugiau nei 60–90 % informacijos perduodama būtent per kūno kalbą, toną ir gestus. Tai „tylioji kalba“, kuri dažnai yra nuoširdesnė už ištartus žodžius.</p>
+          
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">1. Kūno kalba (Kinezika)</h4>
+          <p class="mb-2 text-gray-700 dark:text-gray-300">Tai judesiai, kurie išduoda mūsų vidinę būseną:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700 dark:text-gray-300">
+            <li><strong>Laikysena.</strong> Atvira laikysena (nesukryžiuotos rankos) rodo pasitikėjimą ir palankumą; susigūžimas – gynybinę poziciją.</li>
+            <li><strong>Gestai.</strong> Rankų judesiai gali sustiprinti mintį, tačiau perteklinis gestikuliavimas gali rodyti nerimą.</li>
+            <li><strong>Mėgdžiojimas (Mirroring).</strong> Jei pašnekovas subtiliai atkartoja jūsų pozą, tai dažniausiai reiškia, kad jis jaučia jums empatiją arba pritaria jūsų nuomonei.</li>
+          </ul>
+
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">2. Veido išraiškos ir akių kontaktas</h4>
+          <p class="mb-2 text-gray-700 dark:text-gray-300">Veidas yra pagrindinis emocijų žemėlapis:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700 dark:text-gray-300">
+            <li><strong>Mikroišraiškos.</strong> Akimirksniu pasirodančios tikrosios emocijos (pvz., trumpas lūpų virptelėjimas), kurias sunku suklastoti.</li>
+            <li><strong>Akių kontaktas.</strong> Tiesioginis žvilgsnis rodo susidomėjimą, tačiau per ilgas spoksojimas gali būti suvokiamas kaip agresija. Vengimas žiūrėti į akis dažnai signalizuoja apie nepatogumą ar nesaugumą.</li>
+          </ul>
+
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">3. Paralingvistika (Balso savybės)</h4>
+          <p class="mb-2 text-gray-700 dark:text-gray-300">Tai ne ką sakote, o kaip sakote:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700 dark:text-gray-300">
+            <li><strong>Tonis ir aukštis.</strong> Pakeltas tonas gali reikšti pyktį arba susijaudinimą.</li>
+            <li><strong>Tempas.</strong> Greita kalba dažnai išduoda nervingumą, o lėta ir rami – autoritetą.</li>
+            <li><strong>Pauzės.</strong> Jos gali būti naudojamos pabrėžti svarbią mintį arba rodyti dvejones.</li>
+          </ul>
+
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">4. Proksemika (Erdvės pojūtis)</h4>
+          <p class="mb-2 text-gray-700 dark:text-gray-300">Kiekvienas turime „asmeninį burbulą“. Atstumas tarp žmonių nusako santykių pobūdį:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700 dark:text-gray-300">
+            <li><strong>Intymioji zona (iki 45 cm).</strong> Skirta tik artimiausiems.</li>
+            <li><strong>Asmeninė zona (45 cm – 1,2 m).</strong> Draugiškiems pokalbiams.</li>
+            <li><strong>Socialinė zona (1,2 m – 3,6 m).</strong> Darbo reikalams ir nepažįstamiems.</li>
+          </ul>
+
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">Kodėl tai svarbu?</h4>
+          <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Auksinė taisyklė.</strong> Jei žmogaus žodžiai prieštarauja jo kūno kalbai (pvz., sako „aš nesijaudinu“, bet trepsi koja), mes pasąmoningai labiau tikime kūno kalba.</p>
+
+          <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">Patarimai geresniam bendravimui:</h4>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Stebėkite visumą.</strong> Vienas gestas (pvz., sukryžiuotos rankos) gali reikšti tiesiog tai, kad žmogui šalta. Išvadas darykite matydami bent kelis ženklus vienu metu.</li>
+            <li><strong>Kontroliuokite save.</strong> Sąmoningai atpalaiduoti pečiai ir švelni šypsena padeda ne tik pašnekovui pasijusti geriau, bet ir jums patiems nusiraminti.</li>
+          </ul>
         `
       },
       {
         id: 'parent_meetings',
         title: 'Tėvų susirinkimai',
-        imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Bendradarbiavimas</h3>
-          <p class="mb-4 text-gray-700">Tėvų susirinkimai skirti aptarti vaiko pažangą. Tai ne vieta viešai kritikuoti kitus vaikus ar mokytojus.</p>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Konfidencialumas</h3>
-          <p class="mb-4 text-gray-700">Asmeniniai klausimai apie konkretų mokinį turėtų būti aptariami individualiai su mokytoju, o ne bendro susirinkimo metu.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Pagalba šeimai auginančiai vaikus</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tyrimai rodo, kad tėvų įtraukimas į mokyklos gyvenimą tiesiogiai siejasi su geresniais vaikų pasiekimais ir elgesiu. Nors kartais tėvų susirinkimai kelia nerimą, šiuolaikinė mokykla siekia, kad jie būtų prasmingi ir įdomūs.</p>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">5+ Tėvų susirinkimų vadovas</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Vadovaujantis LIONS QUEST programų modeliu, siūlomos penkios aktualios temos susitikimams, kurios padeda kurti bendruomenę ir stiprinti ryšį su vaiku:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>1. Klasės bendruomenės kūrimas.</strong></li>
+            <li><strong>2. Bendravimas šeimoje.</strong></li>
+            <li><strong>3. Emocijos ir jų atpažinimas.</strong></li>
+            <li><strong>4. Stresas ir jo valdymas.</strong></li>
+            <li><strong>5. Kompiuteris namuose.</strong></li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Sėkmingo susirinkimo taisyklės</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Tikslas.</strong> Bendri susirinkimai skirti visai klasei aktualioms temoms, o ne asmeniniams vaikų pasiekimams aptarti.</li>
+            <li><strong>Konfidencialumas.</strong> Individualūs klausimai sprendžiami asmeninių pokalbių metu, kad nebūtų pažeistas vaiko ar šeimos privatumas.</li>
+            <li><strong>Pasirengimas.</strong> Apie susirinkimus informuojama iš anksto, nurodant temą ir trukmę.</li>
+          </ul>
         `
       },
       {
         id: 'school_events',
         title: 'Mokyklos renginiai',
-        imageUrl: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Himnas ir vėliava</h3>
-          <p class="mb-4 text-gray-700">Giedant himną ar keliant vėliavą, stovime ramiai, pasitempę, nekalbame ir nesinaudojame telefonais. Tai pagarbos valstybei ženklas.</p>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Pagarba kalbėtojui</h3>
-          <p class="mb-4 text-gray-700">Kai kas nors kalba scenoje (direktorius, svečias, mokinys), salėje turi būti tyla. Plojimai – geriausia padėka už pasirodymą. Švilpimas ar replikos yra nemandagu.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Himnas ir vėliava</h3>
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Mokyklos renginys" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Giedant himną ar keliant vėliavą, stovime ramiai, pasitempę, nekalbame ir nesinaudojame telefonais. Tai pagarbos valstybei ženklas.</p>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Elgesys renginio metu</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Telefonai.</strong> Renginio metu telefonai turi būti išjungti arba nustatyti begarsiu režimu. Jokių žinučių rašymo ar naršymo internete – tai rodo nepagarbą atlikėjams ir kitiems žiūrovams.</li>
+            <li><strong>Fotografavimas ir filmavimas.</strong> Fotografuoti ar filmuoti galima tik jei tai netrukdo kitiems (be blykstės, neužstojant vaizdo). Svarbu: filmuoti privačius asmenis ar kelti medžiagą į socialinius tinklus be jų sutikimo yra nemandagu ir gali pažeisti privatumą. Viešuose renginiuose tai dažniausiai leidžiama, bet visada geriau pasitikslinti.</li>
+            <li><strong>Tyla.</strong> Jei salėje triukšminga, o renginys jau prasidėjo, mandagiai paprašykite tylos: „Atsiprašau, negirdžiu, kas kalbama“ arba tiesiog pridėkite pirštą prie lūpų. Švilpimas ar replikos yra nemandagu.</li>
+            <li><strong>Išėjimas.</strong> Jei būtina išeiti (pvz., į tualetą ar pasijutote blogai), darykite tai kuo tyliau, geriausia per plojimus arba tarp pasirodymų. Stenkitės neužstoti vaizdo kitiems.</li>
+          </ul>
         `
       },
       {
         id: 'sustainable_events',
         title: 'Tvarūs mokyklos renginiai',
-        imageUrl: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Šventės be žalos gamtai</h3>
-          <p class="mb-4 text-gray-700">Būti mandagiam reiškia būti mandagiam ir gamtai. Planuojant klasės žiburėlį ar gimtadienį, pagalvokite apie tvarumą.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Šventės be žalos gamtai</h3>
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Tvari šventė" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md" />
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Būti mandagiam reiškia būti mandagiam ir gamtai. Planuojant klasės žiburėlį ar gimtadienį, pagalvokite apie tvarumą.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Kvietimai.</strong> Vietoj popierinių kvietimų, sukurkite gražų skaitmeninį kvietimą ar vaizdo įrašą.</li>
             <li><strong>Dekoracijos.</strong> Venkite vienkartinių balionų ir plastikinių girliandų. Naudokite daugkartines dekoracijas arba pasigaminkite jas patys iš perdirbamų medžiagų.</li>
             <li><strong>Vaišės.</strong> Naudokite daugkartinius indus arba popierinius (ne plastikinius). Atsineškite savo gertuves, kad nereikėtų pirkti vandens plastikiniuose buteliukuose.</li>
             <li><strong>Dovanos.</strong> Geriausia dovana – įspūdžiai (bilietai į kiną, ekskursija) arba valgomi dalykai, o ne plastikiniai niekučiai, kurie greitai atsibosta ir tampa šiukšlėmis.</li>
           </ul>
+        `
+      },
+      {
+        id: 'meeting_etiquette',
+        title: 'Elgesys pamokų metu',
+        imageUrl: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80',
+        content: `
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Dėmesys ir pagarba</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Pamoka yra laikas mokytis. Kaip elgtis, kad netrukdytume kitiems?</p>
+          
+          <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-2">Gamtiniai reikalai</h4>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Jei pamokos metu prireikia į tualetą:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Pakelkite ranką.</strong> Tyliai paprašykite mokytojo leidimo išeiti.</li>
+            <li><strong>Išeikite tyliai.</strong> Tiesiog atsistokite ir kuo tyliau išeikite pro duris.</li>
+            <li><strong>Grįžkite taip pat tyliai.</strong> Užimkite savo vietą nekeldami triukšmo.</li>
+          </ul>
+
+          <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-2">Telefonai</h4>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Telefonai pamokų metu turi būti kuprinėse ir begarsiu režimu, nebent mokytojas leido juos naudoti mokymuisi.</p>
         `
       }
     ]
@@ -466,31 +797,69 @@ export const TOPICS: Topic[] = [
       {
         id: 'email',
         title: 'El. pašto kultūra',
-        imageUrl: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Temos eilutė ir Tonas</h3>
-          <p class="mb-4 text-gray-700">Temos eilutė (Subject) yra pirmoji laiško dalis, kurią mato mokytojas. Ji turi būti informatyvi. Rašydami laišką, laikykitės pagarbaus tono. Venkite „slengo“ ir emociukų pertekliaus.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Temos eilutė (Subject)</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Temos eilutė yra pirmoji laiško dalis, kurią mato gavėjas. Ji turi būti aiški ir informatyvi, kad iškart atspindėtų laiško esmę. Tinkama temos eilutė padeda gavėjui suprasti laiško svarbą ir greičiau atsakyti.</p>
           
-          <h4 class="font-bold text-lg mt-8 mb-4 text-gray-800 text-center">Interaktyvi El. Laiško Anatomija</h4>
-          <div class="my-6 border border-gray-200 rounded-lg shadow-lg bg-white overflow-hidden max-w-2xl mx-auto transform transition-all hover:shadow-xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800 shadow-sm">
+              <h4 class="font-bold text-red-800 dark:text-red-300 mb-2">Venktini pavyzdžiai ❌</h4>
+              <ul class="list-disc pl-5 space-y-2 text-sm text-red-900 dark:text-red-200">
+                <li><em>(Tuščia temos eilutė)</em> – Gali atsidurti šlamšto aplanke.</li>
+                <li><strong>„Sveiki“</strong> – Visiškai neinformuoja apie turinį.</li>
+                <li><strong>„Klausimas“</strong> – Per daug bendra frazė.</li>
+                <li><strong>„SVARBU!!! PRASAU PERSKAITYTI!!!“</strong> – Atrodo tarytum rėkimas, nurodo ne temą, o tik emociją.</li>
+                <li><strong>„Atsiprašau, aš susirgau ir rytoj negalėsiu...“</strong> – Tema nėra visas laiškas, ji turi būti trumpa.</li>
+              </ul>
+            </div>
+            <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 shadow-sm">
+              <h4 class="font-bold text-green-800 dark:text-green-300 mb-2">Geri pavyzdžiai ✅</h4>
+              <ul class="list-disc pl-5 space-y-2 text-sm text-green-900 dark:text-green-200">
+                <li><strong>„Dėl matematikos kontrolinio darbo perlaikymo“</strong></li>
+                <li><strong>„Klausimas apie biologijos projektą (Petras Petraitis, 8a kl.)“</strong></li>
+                <li><strong>„Pasiūlymas dėl kalėdinio mokyklos renginio – Jonas Jonaitis“</strong></li>
+                <li><strong>„Tėvų susirinkimo darbotvarkė (Gruodžio 12 d.)“</strong></li>
+                <li><strong>„Vardas Pavardė – Gyvenimo aprašymas (CV)“</strong></li>
+              </ul>
+            </div>
+          </div>
+          
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Būkite konkretūs.</strong> Iš temos turi būti aišku, apie ką rašote.</li>
+            <li><strong>Įtraukite svarbiausius raktinius žodžius.</strong> Tai padės vėliau lengviau rasti laišką naudojant paiešką.</li>
+            <li><strong>Jei reikia, naudokite identifikatorius.</strong> Nurodykite savo klasę arba projektą, jei rašote mokytojui, turinčiam daug mokinių.</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300 mt-8">Tinkamas tonas ir kalba</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Bendraujant su mokytojais, administracija ar darbdaviais el. paštu, labai svarbu naudoti atitinkamą toną ir taisyklingą kalbą:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Kreipiniai („Gerb.“ vs. „Sveiki“).</strong> Oficialiems asmenims (mokyklos vadovybei, dėstytojams, būsimam darbdaviui) naudokite formalius kreipinius: „Gerbiamas(-a) [Pavardė ar Pareigos]“ arba laiško pradžioje rašykite „Laba diena“. Kreipinys „Sveiki“ yra neutralus ir tinka kasdienei dalykinei komunikacijai, tačiau „Labas“ ar vardinis kreipinys (be „poveikio“ žodžių) skirtas tik draugams.</li>
+            <li><strong>Venkite žargono (slengo).</strong> Profesionalus laiškas turi būti švarus. Nenaudokite internetinių trumpinių, populiaraus gatvės žargono, šnekamosios kalbos išsireiškimų. Rašykite pilnais, aiškiais sakiniais.</li>
+            <li><strong>Ribokite emociukus (Emojis).</strong> Nors žinutėse draugams emociukai būtini emocijoms perteikti, oficialiuose laiškuose jie dažnai atrodo neprofesionaliai. Geriausia jų visai vengti arba naudoti ypatingai retai, jei su asmeniu jau bendraujate pakankamai laisvai.</li>
+            <li><strong>Pagarbumas.</strong> Net jei rašote pranešdami problemą ar ginčydami įvertinimą, stenkitės išlaikyti ramų, konstruktyvų toną. Pagarbus tonas atveria duris greitesniam ir palankesniam problemų sprendimui.</li>
+          </ul>
+          
+          <h4 class="font-bold text-lg mt-8 mb-4 text-gray-800 dark:text-gray-200 text-center">Interaktyvi El. Laiško Anatomija</h4>
+          <div class="my-6 border border-gray-200 dark:border-slate-700 rounded-lg shadow-lg bg-white dark:bg-slate-800 overflow-hidden max-w-2xl mx-auto transform transition-all hover:shadow-xl">
             <!-- Mock Window Header -->
-            <div class="bg-gray-100 p-3 border-b border-gray-200 flex items-center gap-2">
+            <div class="bg-gray-100 dark:bg-slate-700 p-3 border-b border-gray-200 dark:border-slate-700 flex items-center gap-2">
               <div class="w-3 h-3 rounded-full bg-red-400"></div>
               <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
               <div class="w-3 h-3 rounded-full bg-green-400"></div>
-              <span class="ml-2 text-xs text-gray-500 font-mono">Naujas laiškas</span>
+              <span class="ml-2 text-xs text-gray-500 dark:text-gray-400 font-mono">Naujas laiškas</span>
             </div>
             
             <div class="p-6 space-y-4">
               <!-- Interactive Subject Line -->
               <div class="relative group">
                  <label class="block text-xs font-bold text-gray-400 uppercase tracking-wide mb-1">Tema</label>
-                 <div class="bg-gray-50 p-3 rounded border border-gray-200 text-gray-700 hover:border-primary-400 hover:bg-white transition-all cursor-help flex items-center justify-between">
+                 <div class="bg-gray-50 dark:bg-slate-800/50 p-3 rounded border border-gray-200 dark:border-slate-700 text-gray-700 dark:text-gray-300 hover:border-primary-400 hover:bg-white dark:bg-slate-800 transition-all cursor-help flex items-center justify-between">
                    <span>Dėl namų darbų (Matematika, 8a kl.)</span>
-                   <span class="text-xs text-primary-500 opacity-0 group-hover:opacity-100 transition-opacity font-medium">Kodėl tai gerai?</span>
+                   <span class="text-xs text-primary-500 dark:text-primary-400 opacity-0 group-hover:opacity-100 transition-opacity font-medium">Kodėl tai gerai?</span>
                  </div>
                  <div class="absolute z-20 bottom-full left-0 mb-2 w-72 p-4 bg-gray-800 text-white text-sm rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-y-0 translate-y-2 pointer-events-none">
-                   <strong>Gera tema:</strong> Konkreti, nurodo pamoką ir klasę. Mokytojas iškart supranta, apie ką laiškas.
+                   <strong>Gera tema.</strong> Konkreti, nurodo pamoką ir klasę. Mokytojas iškart supranta, apie ką laiškas.
                    <div class="absolute bottom-[-6px] left-6 w-3 h-3 bg-gray-800 transform rotate-45"></div>
                  </div>
               </div>
@@ -498,13 +867,13 @@ export const TOPICS: Topic[] = [
               <!-- Interactive Body -->
               <div class="relative group">
                  <label class="block text-xs font-bold text-gray-400 uppercase tracking-wide mb-1">Turinis</label>
-                 <div class="bg-gray-50 p-4 rounded border border-gray-200 text-gray-700 min-h-[120px] hover:border-primary-400 hover:bg-white transition-all cursor-help text-sm leading-relaxed">
-                   <p class="mb-2"><span class="bg-blue-100 px-1 rounded">Laba diena, mokytoja,</span></p>
+                 <div class="bg-gray-50 dark:bg-slate-800/50 p-4 rounded border border-gray-200 dark:border-slate-700 text-gray-700 dark:text-gray-300 min-h-[120px] hover:border-primary-400 hover:bg-white dark:bg-slate-800 transition-all cursor-help text-sm leading-relaxed">
+                   <p class="mb-2"><span class="bg-blue-100 dark:bg-blue-900/40 px-1 rounded">Laba diena, mokytoja,</span></p>
                    <p class="mb-2">Siunčiu savo namų darbus, kuriuos uždavėte vakar. Prisegtuke rasite PDF failą.</p>
-                   <p><span class="bg-blue-100 px-1 rounded">Geros dienos!</span></p>
+                   <p><span class="bg-blue-100 dark:bg-blue-900/40 px-1 rounded">Geros dienos!</span></p>
                  </div>
                  <div class="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 p-4 bg-gray-800 text-white text-sm rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-all scale-95 group-hover:scale-100 pointer-events-none text-center">
-                   <strong>Struktūra:</strong><br/>
+                   <strong>Struktūra.</strong><br/>
                    1. Pagarbus kreipinys (Laba diena).<br/>
                    2. Aiškus tikslas (Siunčiu namų darbus).<br/>
                    3. Mandagus atsisveikinimas.
@@ -512,34 +881,83 @@ export const TOPICS: Topic[] = [
               </div>
 
               <!-- Interactive Signature -->
-              <div class="relative group border-t border-gray-100 pt-4 mt-2">
-                  <div class="flex items-center gap-3 cursor-help opacity-75 hover:opacity-100 transition-opacity bg-gray-50 p-2 rounded hover:bg-white border border-transparent hover:border-primary-200">
-                      <div class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-bold text-sm">VP</div>
+              <div class="relative group border-t border-gray-100 dark:border-slate-700 pt-4 mt-2">
+                  <div class="flex items-center gap-3 cursor-help opacity-75 hover:opacity-100 transition-opacity bg-gray-50 dark:bg-slate-800/50 p-2 rounded hover:bg-white dark:bg-slate-800 border border-transparent hover:border-primary-200">
+                      <div class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 dark:text-primary-400 font-bold text-sm">VP</div>
                       <div>
-                          <div class="font-bold text-sm text-gray-800">Vardenis Pavardenis</div>
-                          <div class="text-xs text-gray-500">8a klasės mokinys</div>
+                          <div class="font-bold text-sm text-gray-800 dark:text-gray-200">Vardenis Pavardenis</div>
+                          <div class="text-xs text-gray-500 dark:text-gray-400">8a klasės mokinys</div>
                       </div>
                   </div>
                   <div class="absolute z-20 bottom-full left-0 mb-2 w-72 p-4 bg-gray-800 text-white text-sm rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-y-0 translate-y-2 pointer-events-none">
-                   <strong>Parašas:</strong> Visada nurodykite savo vardą, pavardę ir klasę, kad mokytojas žinotų, kas rašo.
+                   <strong>Parašas.</strong> Visada nurodykite savo vardą, pavardę ir klasę, kad mokytojas žinotų, kas rašo.
                    <div class="absolute bottom-[-6px] left-8 w-3 h-3 bg-gray-800 transform rotate-45"></div>
                  </div>
               </div>
             </div>
           </div>
 
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 mt-8">„Atsakyti visiems“ ir Laikas</h3>
-          <p class="mb-4 text-gray-700">Funkciją „Atsakyti visiems“ naudokite atsargiai. Į laiškus mokytojams rašykite darbo metu (ne vėlai vakare ar savaitgaliais).</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300 mt-8">Laiško užbaigimo frazės</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Kaip ir graži pradžia, tinkamas atsisveikinimas palieka gerą paskutinį įspūdį. Prieš pridedant savo asmeninį parašą, laišką reikia mandagiai užbaigti. Štai dažniausiai naudojamos atsisveikinimo frazės ir situacijos, kada jas naudoti:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>„Pagarbiai“ (Pagarbiai,)</strong> – Pati saugiausia, standartinė ir universali frazė. Puikiai tinka bendraujant oficialiai, rašant mokytojams, vadovams, darbdaviams, ar asmenims, kuriems rašote pirmą kartą. (Angliški atitikmenys: <em>Sincerely</em>, <em>Regards</em>).</li>
+            <li><strong>„Nuoširdžiai“ (Nuoširdžiai,)</strong> – Šiek tiek šiltesnė, asmeniškesnė frazė. Tinka bendraujant su žmonėmis, kuriuos jau neblogai pažįstate, tačiau vis dar išlaikant profesinį ar pagarbų toną. (Angliški atitikmenys: <em>Yours truly</em>, <em>Warm regards</em>).</li>
+            <li><strong>„Geriausi linkėjimai“ / „Linkėjimai“</strong> – Tinka mažiau formaliam, kasdieniam ir draugiškam bendravimui, kai su asmeniu bendraujate nuolatos (pvz., laiškai klasiokams, būrelio draugams, kolegoms). (Angliški atitikmenys: <em>Best regards</em>, <em>Best</em>, <em>Cheers</em>).</li>
+            <li><strong>„Iš anksto dėkoju“</strong> – Labai naudinga frazė, kai laiške ko nors prašote (pvz., atidėti atsiskaitymą, persiųsti medžiagą). Tai parodo jūsų dėkingumą dar prieš įvykdant prašymą.</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300 mt-8">Profesionalus el. pašto parašas</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Kiekvieno laiško pabaigoje būtinas profesionalus parašas. Jis parodo jūsų rimtumą ir padeda gavėjui iškart suprasti, su kuo jis bendrauja. Paraše būtinai nurodykite:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700 dark:text-gray-300">
+            <li><strong>Vardą ir pavardę.</strong></li>
+            <li><strong>Rolę.</strong> Klasę (mokiniams), pareigas (darbuotojams) arba organizaciją.</li>
+            <li><strong>Kontaktinę informaciją.</strong> Telefono numerį ir, jei reikia, nuorodą į jūsų profilį / svetainę.</li>
+          </ul>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 rounded p-4 shadow-sm">
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-2"><strong>Mokinio parašo pavyzdys.</strong></p>
+              <p class="text-sm text-gray-800 dark:text-gray-200 font-mono">
+                Pagarbiai,<br>
+                Vardenis Pavardenis<br>
+                8a klasės mokinys / Gimnazijos tarybos narys<br>
+                El. paštas: vardenis.p@mokykla.lt<br>
+                Tel.: +370 600 00000
+              </p>
+            </div>
+            <div class="bg-blue-50 border border-blue-200 rounded p-4 shadow-sm">
+              <p class="text-sm text-blue-700 mb-2"><strong>Darbuotojo / Oficialus pavyzdys.</strong></p>
+              <p class="text-sm text-blue-900 font-mono">
+                Nuoširdžiai,<br>
+                Rūta Jonaitienė<br>
+                Projektų vadovė | UAB „Inovacijos“<br>
+                ruta.j@inovacijos.lt | www.inovacijos.lt<br>
+                Tel.: +370 611 11111
+              </p>
+            </div>
+            <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded p-4 md:col-span-2 shadow-sm">
+              <p class="text-sm text-green-700 mb-2"><strong>Akademinis (studento/mokytojo) pavyzdys.</strong></p>
+              <p class="text-sm text-green-900 dark:text-green-200 font-mono">
+                Pagarbiai,<br>
+                Linas Petrauskas<br>
+                Istorijos mokytojas metodininkas | Šviesos gimnazija<br>
+                Konsultacijų laikas: Antradieniais 15:00 - 16:00
+              </p>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300 mt-8">„Atsakyti visiems“ ir Laikas</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Funkciją „Atsakyti visiems“ naudokite atsargiai. Į laiškus mokytojams rašykite darbo metu (ne vėlai vakare ar savaitgaliais).</p>
         `
       },
       {
         id: 'instant_messaging',
         title: 'Bendravimas klasės grupėse',
-        imageUrl: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Klasės susirašinėjimai (Messenger, Discord)</h3>
-          <p class="mb-4 text-gray-700">Bendraujant internetu su klasiokais ir mokytojais galioja tos pačios mandagumo taisyklės kaip ir realybėje.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Klasės bendravimas (Google Chat, Google Meet, Discord)</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Bendraujant internetu su klasiokais ir mokytojais galioja tos pačios mandagumo taisyklės kaip ir realybėje.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Pasisveikinimas.</strong> Visada mandagu pasisveikinti, ypač jei rašote mokytojui. „Labas“ tinka draugams, „Laba diena“ – mokytojams.</li>
             <li><strong>Laikas.</strong> Gerbkite kitų poilsį. Nerašykite klausimų apie namų darbus vėlai vakare ar savaitgaliais. Mokytojai taip pat turi laisvalaikį!</li>
             <li><strong>Emoji ir rašyba.</strong> Emoji padeda perteikti emocijas, bet nenaudokite jų per daug. Rašykite aiškiai, venkite įžeidžiančių žodžių ar patyčių.</li>
@@ -550,14 +968,14 @@ export const TOPICS: Topic[] = [
       {
         id: 'remote_work',
         title: 'Nuotolinės pamokos',
-        imageUrl: 'https://images.unsplash.com/photo-1584697964358-3e14ca57658b?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Kaip elgtis per Google Meet ar Zoom?</h3>
-          <p class="mb-4 text-gray-700">Nuotolinė pamoka yra tokia pati pamoka, tik vyksta kompiuterio ekrane. Svarbu elgtis atsakingai ir pagarbiai.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kaip elgtis per Google Meet ar Zoom?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Nuotolinė pamoka yra tokia pati pamoka, tik vyksta kompiuterio ekrane. Svarbu elgtis atsakingai ir pagarbiai.</p>
           
-          <div class="bg-green-50 p-4 rounded-lg border border-green-100 mb-6">
-            <h4 class="font-bold text-green-800 mb-2 flex items-center">✅ 5 TAIP (Ką daryti)</h4>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700 text-sm">
+          <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-100 mb-6">
+            <h4 class="font-bold text-green-800 dark:text-green-300 mb-2 flex items-center">✅ 5 TAIP (Ką daryti)</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm">
               <li><strong>Pasiruošk.</strong> Susikurk patogią darbo vietą, pasitikrink įrangą ir interneto ryšį.</li>
               <li><strong>Uniforma.</strong> Pamokų metu dėvėk mokyklos uniformą – tai nuteikia darbui.</li>
               <li><strong>Kamera.</strong> Laikyk kamerą įjungtą. Mokytojui ir draugams svarbu tave matyti. Naudok foną privatumui.</li>
@@ -566,9 +984,9 @@ export const TOPICS: Topic[] = [
             </ul>
           </div>
 
-          <div class="bg-red-50 p-4 rounded-lg border border-red-100 mb-6">
-            <h4 class="font-bold text-red-800 mb-2 flex items-center">❌ 5 NE (Ko vengti)</h4>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700 text-sm">
+          <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-100 mb-6">
+            <h4 class="font-bold text-red-800 dark:text-red-300 mb-2 flex items-center">❌ 5 NE (Ko vengti)</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm">
               <li><strong>Vėlavimas.</strong> Nevėluok prisijungti prie pamokos.</li>
               <li><strong>Triukšmas.</strong> Laikyk mikrofoną išjungtą, kai nekalbi, kad pašaliniai garsai netrukdytų kitiems.</li>
               <li><strong>Blaškymasis.</strong> Nesiblaškyk po kitus naršyklės langus ar žaidimus pamokos metu.</li>
@@ -589,10 +1007,10 @@ export const TOPICS: Topic[] = [
       {
         id: 'video_calls',
         title: 'Vaizdo konferencijų etiketas',
-        imageUrl: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1616587226157-48e49175ee20?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Pasiruošimas vaizdo skambučiui</h3>
-          <p class="mb-6 text-gray-700">Vaizdo skambučiai reikalauja tokio pat pasiruošimo kaip ir gyvi susitikimai, tačiau turi papildomų techninių niuansų.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Pasiruošimas vaizdo skambučiui</h3>
+          <p class="mb-6 text-gray-700 dark:text-gray-300">Vaizdo skambučiai reikalauja tokio pat pasiruošimo kaip ir gyvi susitikimai, tačiau turi papildomų techninių niuansų.</p>
 
           <div class="my-8 bg-gray-900 rounded-xl overflow-hidden shadow-2xl border-4 border-gray-800 relative aspect-video group">
             <!-- Mock Video Feed -->
@@ -608,10 +1026,10 @@ export const TOPICS: Topic[] = [
                  </div>
                  <div class="group/rec relative pointer-events-auto">
                    <div class="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse cursor-help flex items-center gap-1 shadow-lg">
-                      <div class="w-2 h-2 bg-white rounded-full"></div> REC
+                      <div class="w-2 h-2 bg-white dark:bg-slate-800 rounded-full"></div> REC
                    </div>
-                   <div class="absolute top-full right-0 mt-2 w-56 bg-white text-gray-800 text-xs p-3 rounded-lg shadow-xl opacity-0 group-hover/rec:opacity-100 transition-opacity transform translate-y-2 group-hover/rec:translate-y-0 z-20">
-                     <strong>Etiketo taisyklė:</strong> Visada atsiklauskite ir įspėkite visus dalyvius prieš pradedant įrašinėti pokalblį.
+                   <div class="absolute top-full right-0 mt-2 w-56 bg-white dark:bg-slate-800 text-gray-800 dark:text-gray-200 text-xs p-3 rounded-lg shadow-xl opacity-0 group-hover/rec:opacity-100 transition-opacity transform translate-y-2 group-hover/rec:translate-y-0 z-20">
+                     <strong>Etiketo taisyklė.</strong> Visada atsiklauskite ir įspėkite visus dalyvius prieš pradedant įrašinėti pokalblį.
                    </div>
                  </div>
               </div>
@@ -622,9 +1040,9 @@ export const TOPICS: Topic[] = [
                    <div class="w-12 h-12 rounded-full bg-gray-700/80 backdrop-blur hover:bg-red-500 flex items-center justify-center text-white transition-all cursor-help border border-gray-500 hover:scale-110 shadow-lg">
                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
                    </div>
-                   <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-48 bg-white text-gray-800 text-xs p-3 rounded-lg shadow-xl opacity-0 group-hover/btn:opacity-100 transition-all translate-y-2 group-hover/btn:translate-y-0 text-center">
-                     <strong>Mikrofonas:</strong> Laikykite išjungtą (Mute), kai nekalbate, kad išvengtumėte pašalinių garsų (klaviatūros barškėjimo, aido).
-                     <div class="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rotate-45"></div>
+                   <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-48 bg-white dark:bg-slate-800 text-gray-800 dark:text-gray-200 text-xs p-3 rounded-lg shadow-xl opacity-0 group-hover/btn:opacity-100 transition-all translate-y-2 group-hover/btn:translate-y-0 text-center">
+                     <strong>Mikrofonas.</strong> Laikykite išjungtą (Mute), kai nekalbate, kad išvengtumėte pašalinių garsų (klaviatūros barškėjimo, aido).
+                     <div class="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white dark:bg-slate-800 rotate-45"></div>
                    </div>
                  </div>
 
@@ -633,9 +1051,9 @@ export const TOPICS: Topic[] = [
                    <div class="w-12 h-12 rounded-full bg-gray-700/80 backdrop-blur hover:bg-green-500 flex items-center justify-center text-white transition-all cursor-help border border-gray-500 hover:scale-110 shadow-lg">
                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
                    </div>
-                   <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-48 bg-white text-gray-800 text-xs p-3 rounded-lg shadow-xl opacity-0 group-hover/btn:opacity-100 transition-all translate-y-2 group-hover/btn:translate-y-0 text-center">
-                     <strong>Kamera:</strong> Įjungta kamera rodo pagarbą ir dėmesį pašnekovams. Žiūrėkite į kamerą, ne į ekraną.
-                     <div class="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rotate-45"></div>
+                   <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-48 bg-white dark:bg-slate-800 text-gray-800 dark:text-gray-200 text-xs p-3 rounded-lg shadow-xl opacity-0 group-hover/btn:opacity-100 transition-all translate-y-2 group-hover/btn:translate-y-0 text-center">
+                     <strong>Kamera.</strong> Įjungta kamera rodo pagarbą ir dėmesį pašnekovams. Žiūrėkite į kamerą, ne į ekraną.
+                     <div class="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white dark:bg-slate-800 rotate-45"></div>
                    </div>
                  </div>
                  
@@ -644,17 +1062,17 @@ export const TOPICS: Topic[] = [
                    <div class="w-12 h-12 rounded-full bg-gray-700/80 backdrop-blur hover:bg-yellow-500 flex items-center justify-center text-white transition-all cursor-help border border-gray-500 hover:scale-110 shadow-lg">
                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a9 9 0 0 1 3.24-14.22"/></svg>
                    </div>
-                   <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-48 bg-white text-gray-800 text-xs p-3 rounded-lg shadow-xl opacity-0 group-hover/btn:opacity-100 transition-all translate-y-2 group-hover/btn:translate-y-0 text-center">
-                     <strong>Pakelti ranką:</strong> Naudokite šią funkciją, kad nepertrauktumėte kalbančiojo.
-                     <div class="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rotate-45"></div>
+                   <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-48 bg-white dark:bg-slate-800 text-gray-800 dark:text-gray-200 text-xs p-3 rounded-lg shadow-xl opacity-0 group-hover/btn:opacity-100 transition-all translate-y-2 group-hover/btn:translate-y-0 text-center">
+                     <strong>Pakelti ranką.</strong> Naudokite šią funkciją, kad nepertrauktumėte kalbančiojo.
+                     <div class="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white dark:bg-slate-800 rotate-45"></div>
                    </div>
                  </div>
               </div>
             </div>
           </div>
           
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Svarbiausios taisyklės</h3>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Svarbiausios taisyklės</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
              <li><strong>Aplinka.</strong> Pasirūpinkite neutraliu fonu ir geru apšvietimu (šviesa turi kristi jums į veidą).</li>
              <li><strong>Punktualumas.</strong> Prisijunkite 2-3 minutėmis anksčiau, kad patikrintumėte ryšį.</li>
              <li><strong>Dėmesys.</strong> Neužsiimkite pašaliniais darbais (el. pašto tikrinimu) pokalbio metu – tai matosi.</li>
@@ -665,7 +1083,7 @@ export const TOPICS: Topic[] = [
   },
   {
     id: 'table',
-    title: 'Pobūvių ir stalo etiketas',
+    title: 'Renginiai, dovanos ir stalo etiketas',
     description: 'Priėmimai, elgesys prie stalo, įrankiai ir dovanos.',
     iconName: 'Utensils',
     color: 'rose',
@@ -674,14 +1092,15 @@ export const TOPICS: Topic[] = [
       {
         id: 'receptions',
         title: 'Mokyklos šventės',
-        imageUrl: 'https://images.unsplash.com/photo-1561047029-3000c68339ca?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Renginių tipai</h3>
-          <p class="mb-4 text-gray-700">Mokykloje vyksta įvairios šventės, kurioms galioja skirtingos taisyklės.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Renginių tipai</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Mokykloje vyksta įvairios šventės, kurioms galioja skirtingos taisyklės.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Arbatėlė.</strong> Jauki klasės šventė. Vaišinamasi arbata ir suneštiniais užkandžiais. Svarbu mandagiai pasiūlyti draugui, o ne pulti prie stalo pirmam.</li>
             <li><strong>Žiburėlis / Diskoteka.</strong> Linksma šventė su muzika. Apranga gali būti laisvesnė, bet tvarkinga. Svarbu ne tik šokti, bet ir bendrauti, nepalikti vienišų klasiokų.</li>
-            <li><strong>Išleistuvės / Šimtadienis.</strong> Iškilmingas renginys. Apranga puošni (kostiumas, suknelė). Elgesys – ypač mandagus ir pagarbus mokytojams bei tėvams.</li>
+            <li><strong>Išleistuvės.</strong> Iškilmingas renginys baigiant progimnaziją ar jos etapą. Apranga puošni (kostiumas, šventinė suknelė). Elgesys – ypač mandagus ir pagarbus mokytojams bei tėvams.</li>
+            <li><strong>Valstybės švenčių minėjimas.</strong> Oficialūs minėjimai (pvz., Vasario 16-oji, Kovo 11-oji, Sausio 13-oji). Būtina oficiali apranga (arba mokyklinė uniforma). Renginio metu išlaikoma pagarbi rimtis, giedant himną privalu atsistoti ir elgtis pagarbiai. Paslėpkite telefonus ir nesikalbėkite.</li>
             <li><strong>Piknikas.</strong> Šventė gamtoje. Svarbiausia taisyklė – nepalikti šiukšlių ir saugoti gamtą.</li>
           </ul>
         `
@@ -689,50 +1108,101 @@ export const TOPICS: Topic[] = [
       {
         id: 'table_manners',
         title: 'Elgesys prie stalo',
-        imageUrl: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1606787620819-8bdf0c44c293?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Laikysena</h3>
-          <p class="mb-4 text-gray-700">Sėdėkite tiesiai, neatsilošę. Rankas laikykite ant stalo (ne alkūnes!), o ne po stalu. Nedera žaisti su įrankiais ar sukiotis.</p>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Servetėlė</h3>
-          <p class="mb-4 text-gray-700">Servetėlė tiesiama tik ant kelių. Baigus valgyti, ji paliekama kairėje lėkštės pusėje, nesulankstyta kruopščiai, bet ir nesuglamžyta.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kada pradėti valgyti?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Jei esate svečiuose, palaukite, kol šeimininkė(-as) pradės valgyti arba pakvies tai daryti. Dideliame pobūvyje galima pradėti, kai patiekiama mažiausiai 3–4 svečiams.</p>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Laikysena</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Sėdėkite tiesiai, neatsilošę ir ne per arti stalo. Rankas (riešus) laikykite ant stalo krašto, bet <strong>alkūnių ant stalo dėti negalima</strong> (nebent tarp patiekalų, kai nėra lėkščių).</p>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Servetėlė</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Medžiaginė servetėlė.</strong> Tiesiama ant kelių perlenkta pusiau. Ji skirta lūpoms nusivalyti (tapšnojant) ir pirštams nusivalyti.</li>
+            <li><strong>Pakilus nuo stalo.</strong> Jei trumpam išeinate, servetėlę palikite ant kėdės. Baigus valgyti, ji paliekama kairėje lėkštės pusėje (nesulankstyta, bet ir ne suglamžyta).</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Pokalbiai ir telefonai</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Prie stalo telefonai turi būti paslėpti. Jei laukiate svarbaus skambučio, atsiprašykite ir išeikite pasikalbėti. Venkite ginčytinų temų (politika, ligos), kalbėkite apie malonius dalykus.</p>
+        `
+      },
+      {
+        id: 'seating_etiquette',
+        title: 'Sodinimo planas',
+        imageUrl: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80',
+        content: `
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Garbės vietos</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Oficialiuose pietuose svarbiausia vieta – dešinėje nuo šeimininko (arba šeimininkės). Antroji pagal svarbą – kairėje.</p>
+          
+          <div class="bg-primary-50 dark:bg-primary-900/20 p-4 rounded-lg border border-primary-100 dark:border-primary-800 mb-6">
+            <h4 class="font-bold text-primary-800 dark:text-primary-300 mb-2">Sodinimo principai:</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+              <li><strong>Svečiai.</strong> Garbingiausias svečias sėdi šeimininkui iš dešinės.</li>
+              <li><strong>Poros.</strong> Oficialiuose priėmimuose sutuoktiniai dažniausiai sodinami atskirai (kad bendrautų su kitais), tačiau neoficialiuose – gali sėdėti kartu.</li>
+              <li><strong>Vyrai ir moterys.</strong> Stengiamasi sodinti pakaitomis (vyras-moteris-vyras).</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kada sėstis?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Prie stalo sėdamasi tik tada, kai atsisėda šeimininkė(-as) arba kai parodoma jūsų vieta. Vyras padeda atsisėsti moteriai (patraukia kėdę).</p>
         `
       },
       {
         id: 'cutlery_eating',
         title: 'Įrankiai ir valgymas',
-        imageUrl: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Įrankių naudojimas</h3>
-          <p class="mb-4 text-gray-700">Pradėkite nuo įrankių, esančių toliausiai nuo lėkštės. Baigus valgyti, įrankiai sudedami lygiagrečiai (kotais į dešinę).</p>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Kaip valgyti</h3>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-            <li><strong>Duona.</strong> Laužiama mažais gabalėliais rankomis.</li>
-            <li><strong>Sriuba.</strong> Šaukštas keliamas smaigaliu arba šonu. Lėkštę galima lengvai paversti nuo savęs.</li>
-            <li><strong>Spagečiai.</strong> Sukami ant šakutės, galima padėti šaukštu.</li>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Įrankių kalba</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Kaip padedate įrankius, siunčiate žinutę padavėjui:</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-lg border border-gray-200 dark:border-slate-700 shadow-sm">
+              <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-2">Pertraukėlė</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Įrankiai sukryžiuoti lėkštėje (šakutė kairėje, peilis dešinėje), bet ne ant kraštų. Reiškia: „Dar valgysiu“.</p>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-lg border border-gray-200 dark:border-slate-700 shadow-sm">
+              <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-2">Pabaiga</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Įrankiai sudėti lygiagrečiai (kotais į dešinę, 4-5 valandos kryptimi). Reiškia: „Baigiau, galite paimti lėkštę“.</p>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Įvairių įrankių naudojimas</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Išorė į vidų.</strong> Pradėkite nuo įrankių, esančių toliausiai nuo lėkštės, ir eikite link jos. Dienos pietų peilis dedamas lėkštės dešinėje, <strong>jo ašmenys visuomet turi būti atsukti į lėkštės pusę</strong>. Salotų šakutė visuomet įprastai dedama lėkštės kairėje (nuo vakarienės šakutės į išorę).</li>
+            <li><strong>Žuvies peilis ir šakutė.</strong> Žuvies peilis nėra aštrus – jis skirtas žuviai atskirti nuo kaulų, o ne pjauti. Žuvies šakutė paprastai yra pastebimai platesnė.</li>
+            <li><strong>Deserto įrankiai.</strong> Jie dedami virš lėkštės (viršuje). Desertinis šaukštelis imamas į dešinę ranką, o šakutė – į kairę (ji padeda prilaikyti pyrago ar torto gabalėlį).</li>
+          </ul>
+
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kaip valgyti skirtingus patiekalus ir dalintis jais?</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Maisto perdavimas.</strong> Valgiai ar prieskoniai prie bendro stalo visuomet perduodami į dešinę pusę (prieš laikrodžio rodyklę), kad išvengtume susidūrimų. Atkreipkite dėmesį, kad imant duonos riekelę nereikėtų nuversti šalia sėdinčio žmogaus vandens taurės.</li>
+            <li><strong>Dantų krapštukai.</strong> Niekada nesinaudokite dantų krapštuku prie stalo. Prireikus krapštuko, mandagiai atsiprašykite, sumurmėkite „man reikia į tualetą“ ir susitvarkykite vonios kambaryje.</li>
+            <li><strong>Duona.</strong> Niekada nepjaukite duonos peiliu ir neatsikąskite nuo visos riekės. Laužkite po nedidelį gabalėlį (vienam kąsniui) pirštais virš savo duonos lėkštutės. Sviestas tepamas tik ant atsilaužto gabalėlio. Niekuomet nesitepkite visos duonos riekės sviestu iš karto, idant "sutaupytumėte laiko ir energijos".</li>
+            <li><strong>Sriuba.</strong> Semkite sriubą šaukštu <strong>nuo savęs</strong>. Prie lūpų kelkite šaukštą, o ne patys lenkitės prie lėkštės. Likusią sriubą galima pabaigti, lėkštę šiek tiek paverčiant nuo savęs. Niekada nepūskite karštos sriubos.</li>
+            <li><strong>Makaronai (pasta).</strong> Spagečiai vyniojami ant šakutės, atremiant ją į lėkštės kraštą. Jų nereikėtų pjaustyti peiliu ar garsiai siurbti. Leidžiama padėti šaukštu, bet elegantiškiau naudoti tik šakutę.</li>
           </ul>
         `
       },
       {
         id: 'gifts',
         title: 'Dovanų politika',
-        imageUrl: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Ką galima ir ko negalima priimti?</h3>
-          <p class="mb-4 text-gray-700">Švietimo įstaigose galioja griežta dovanų politika, siekiant užtikrinti skaidrumą.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Ką galima ir ko negalima priimti?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Švietimo įstaigose galioja griežta dovanų politika, siekiant užtikrinti skaidrumą.</p>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div class="bg-green-50 p-4 rounded-lg border border-green-100">
-              <h4 class="font-bold text-green-800 mb-2 flex items-center"><span class="mr-2">✅</span> Galima priimti</h4>
-              <ul class="text-sm text-green-900 space-y-1 list-disc pl-4">
+            <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-100">
+              <h4 class="font-bold text-green-800 dark:text-green-300 mb-2 flex items-center"><span class="mr-2">✅</span> Galima priimti</h4>
+              <ul class="text-sm text-green-900 dark:text-green-200 space-y-1 list-disc pl-4">
                 <li>Dovanas pagal tarptautinį protokolą ar tradicijas.</li>
                 <li>Reprezentacines dovanas (su įstaigos simbolika).</li>
                 <li>Simbolines dovanas (gėles, knygas) profesinių švenčių proga (Mokytojo diena, Rugsėjo 1-oji).</li>
                 <li>Kvietimus į nemokamus renginius, susijusius su pareigomis.</li>
               </ul>
             </div>
-            <div class="bg-red-50 p-4 rounded-lg border border-red-100">
-              <h4 class="font-bold text-red-800 mb-2 flex items-center"><span class="mr-2">❌</span> Negalima priimti</h4>
-              <ul class="text-sm text-red-900 space-y-1 list-disc pl-4">
+            <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-100">
+              <h4 class="font-bold text-red-800 dark:text-red-300 mb-2 flex items-center"><span class="mr-2">❌</span> Negalima priimti</h4>
+              <ul class="text-sm text-red-900 dark:text-red-200 space-y-1 list-disc pl-4">
                 <li>Pinigų (grynais ar dovanų čekiais).</li>
                 <li>Alkoholio ir tabako gaminių.</li>
                 <li>Paslaugų, kelionių, nuolaidų.</li>
@@ -741,11 +1211,11 @@ export const TOPICS: Topic[] = [
             </div>
           </div>
 
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Tylaus sutikimo taisyklė</h3>
-          <p class="mb-4 text-gray-700">Jei dovana yra simbolinė ir jos vertė <strong>neviršija 1 BSI (74 Eur)</strong>, ji laikoma ją gavusio asmens nuosavybe ir jos registruoti nereikia. Tai vadinama „Tylaus sutikimo taisykle“.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Tylaus sutikimo taisyklė</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Jei dovana yra simbolinė ir jos vertė <strong>neviršija 1 BSI (74 Eur)</strong>, ji laikoma ją gavusio asmens nuosavybe ir jos registruoti nereikia. Tai vadinama „Tylaus sutikimo taisykle“.</p>
 
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Dovanų registravimas</h3>
-          <p class="mb-4 text-gray-700">Jei dovanos vertė viršija 150 Eur, ji tampa įstaigos nuosavybe. Visos dovanos, kurių vertė viršija 1 BSI, turi būti deklaruojamos.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Dovanų registravimas</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Jei dovanos vertė viršija 150 Eur, ji tampa įstaigos nuosavybe. Visos dovanos, kurių vertė viršija 1 BSI, turi būti deklaruojamos.</p>
 
           <div class="mt-6">
             <a href="https://antakalnio.lt/paslaugos/registrai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors shadow-sm">
@@ -758,33 +1228,13 @@ export const TOPICS: Topic[] = [
         `
       },
       {
-        id: 'meeting_etiquette',
-        title: 'Elgesys pamokų metu',
-        imageUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80',
-        content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Dėmesys ir pagarba</h3>
-          <p class="mb-4 text-gray-700">Pamoka yra laikas mokytis. Kaip elgtis, kad netrukdytume kitiems?</p>
-          
-          <h4 class="font-bold text-gray-800 mb-2">Gamtiniai reikalai</h4>
-          <p class="mb-4 text-gray-700">Jei pamokos metu prireikia į tualetą:</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-            <li><strong>Pakelkite ranką.</strong> Tyliai paprašykite mokytojo leidimo išeiti.</li>
-            <li><strong>Išeikite tyliai.</strong> Tiesiog atsistokite ir kuo tyliau išeikite pro duris.</li>
-            <li><strong>Grįžkite taip pat tyliai.</strong> Užimkite savo vietą nekeldami triukšmo.</li>
-          </ul>
-
-          <h4 class="font-bold text-gray-800 mb-2">Telefonai</h4>
-          <p class="mb-4 text-gray-700">Telefonai pamokų metu turi būti kuprinėse ir begarsiu režimu, nebent mokytojas leido juos naudoti mokymuisi.</p>
-        `
-      },
-      {
         id: 'cafeteria',
         title: 'Mokyklos valgykloje',
-        imageUrl: 'https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1567521464027-f127ff144326?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Kultūra prie stalo mokykloje</h3>
-          <p class="mb-4 text-gray-700">Valgykla – tai vieta, kur ilsimės ir bendraujame, todėl svarbu netrukdyti kitiems.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kultūra prie stalo mokykloje</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Valgykla – tai vieta, kur ilsimės ir bendraujame, todėl svarbu netrukdyti kitiems.</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>Eilė.</strong> Stovėk eilėje ramiai, nesistumdyk ir nelįsk be eilės. Gerbk kitų laiką.</li>
             <li><strong>Valgymas.</strong> Valgyk tvarkingai, nemlėtėk ir nekalbėk pilna burna. Naudokis įrankiais.</li>
             <li><strong>Tvarka.</strong> Pavalgius, būtinai nusinešk savo indus į plovyklą. Nepalik ant stalo servetėlių ar maisto likučių.</li>
@@ -805,24 +1255,27 @@ export const TOPICS: Topic[] = [
       {
         id: 'body_language',
         title: 'Kūno kalba',
-        imageUrl: 'https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Ką sako kūnas?</h3>
-          <p class="mb-4 text-gray-700">Neverbalinės priemonės perduoda net 55 proc. informacijos. Gestai dažnai svarbesni už žodžius.</p>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-            <li><strong>Atviri delnai.</strong> Atvirumas, sąžiningumas.</li>
-            <li><strong>Sukryžiuotos rankos.</strong> Gynyba, uždarumas.</li>
-            <li><strong>Akių kontaktas.</strong> Pasitikėjimas. Tačiau pernelyg įkyrus žiūrėjimas gali būti agresyvus.</li>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Ką sako kūnas?</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Neverbalinės priemonės perduoda net 55 proc. informacijos. Gestai dažnai svarbesni už žodžius. Štai įprastų gestų reikšmės ir kaip jos skiriasi vertinant tarpkultūriškai:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Galvos linktelėjimas (aukštyn–žemyn).</strong> Daugelyje šalių reiškia „Taip“ arba pritarimą. Tačiau, pavyzdžiui, Bulgarijoje, Graikijoje ar kai kuriose Indijos dalyse, tai reiškia „Ne“.</li>
+            <li><strong>Galvos sukiojimas (į šonus).</strong> Dažniausiai reiškia „Ne“, tačiau tose pačiose minėtose šalyse tai gali reikšti „Taip“. Indijoje būdingas ir „galvos siūbavimas“ (pakreipiant į šonus), rodantis, kad žmogus klausosi.</li>
+            <li><strong>Sukryžiuotos rankos.</strong> Dažniausiai interpretuojama kaip gynybinė, uždara ar nepasitenkinimo pozicija. Tačiau žmogui paprasčiausiai gali būti šalta. Mokantis skaityti kūno kalbą, niekada nevertinkite vieno gesto – žiūrėkite į žmogaus visumą.</li>
+            <li><strong>Sukryžiuotos kojos.</strong> Sėdint sukryžiavus kojas ir atsirėmus atgal, bendrauti atsisakoma arba rodomas skepticizmas. Jei pėda ar kelias nukreiptas į pašnekovą – tai rodo susidomėjimą, jei nusukta link durų – norą išeiti.</li>
+            <li><strong>Atviri delnai.</strong> Rodo atvirumą, sąžiningumą ir palankumą. Tai vienas universaliausių draugiško nusiteikimo gestų visame pasaulyje.</li>
+            <li><strong>„OK“ rankos ženklas.</strong> Nors JAV tai reiškia, kad „viskas gerai“, Prancūzijoje tai reiškia „nulis“ ar „bevertis“, o Brazilijoje ir kai kuriose kitose Lotynų Amerikos šalyse šis gestas laikomas įžeidžiančiu.</li>
           </ul>
         `
       },
       {
         id: 'gestures_abroad',
         title: 'Gestai užsienyje',
-        imageUrl: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Kultūriniai skirtumai</h3>
-          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kultūriniai skirtumai</h3>
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
             <li><strong>„OK“ ženklas.</strong> JAV – gerai, Prancūzijoje – nulis, Japonijoje – pinigai.</li>
             <li><strong>Pakeltas nykštys.</strong> Vakaruose – viskas gerai, Graikijoje – įžeidimas („užsičiaupk“).</li>
             <li><strong>„V“ ženklas.</strong> Jei delnas atsuktas į save, Didžiojoje Britanijoje tai įžeidimas.</li>
@@ -843,16 +1296,59 @@ export const TOPICS: Topic[] = [
       {
         id: 'countries',
         title: 'Šalių ypatumai',
-        imageUrl: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80',
         content: `
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Vokietija</h3>
-          <p class="mb-4 text-gray-700">Labai svarbus punktualumas ir oficialumas. Kreipinys „tu“ darbe nepriimtinas. Rankos niekada nelaikomos kišenėse.</p>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Prancūzija</h3>
-          <p class="mb-4 text-gray-700">Vertinamas mandagumas ir prancūzų kalbos mokėjimas. Verslo pietūs gali užtrukti ilgai.</p>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Japonija</h3>
-          <p class="mb-4 text-gray-700">Vizitinės kortelės teikiamos abiem rankomis. Nusilenkimas yra tradicinis pasisveikinimas. Dovanos yra labai svarbios, jos turi būti gražiai įpakuotos (vengti balto popieriaus).</p>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800">Arabų šalys</h3>
-          <p class="mb-4 text-gray-700">Kairė ranka laikoma nešvaria (negalima ja paduoti daiktų ar valgyti). Negalima rodyti pado. Venkite kalbų apie moteris.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Vokietija</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Labai svarbus punktualumas ir oficialumas. Kreipinys „tu“ darbe nepriimtinas. Rankos niekada nelaikomos kišenėse.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Prancūzija</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Vertinamas mandagumas ir prancūzų kalbos mokėjimas. Verslo pietūs gali užtrukti ilgai.</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Japonija</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Vizitinės kortelės teikiamos abiem rankomis. Nusilenkimas yra tradicinis pasisveikinimas. Dovanos yra labai svarbios, jos turi būti gražiai įpakuotos (vengti balto popieriaus).</p>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Arabų šalys</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Kairė ranka laikoma nešvaria (negalima ja paduoti daiktų ar valgyti). Negalima rodyti pado. Venkite kalbų apie moteris.</p>
+        `
+      },
+      {
+        id: 'intercultural_comm',
+        title: 'Tarpkultūrinė komunikacija',
+        imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80',
+        content: `
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Skirtingi bendravimo stiliai ir atstumai</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tai, kas mandagu vienoje kultūroje, kitoje gali būti nesuprasta ar net interpretuota kaip įžeidimas. Ne tik žodžiai, bet ir gestai bei atstumai vaidina esminį vaidmenį.</p>
+          
+          <ul class="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+            <li><strong>Akių kontaktas.</strong> Vakarų kultūrose (JAV, Europa) tiesioginis akių kontaktas rodo pasitikėjimą, sąžiningumą ir dėmesį asmeniui. Tačiau daugelyje Azijos, Afrikos ar Lotynų Amerikos šalių per ilgas ar tiesioginis žiūrėjimas į akis (ypač į vyresnį ar aukštesnio statuso vadovą) yra laikomas nepagarba, iššūkiu ar net agresija.</li>
+            <li><strong>Asmeninė erdvė (Proksemika).</strong> Kiekviena kultūra turi savo nematomas „ribas“. Pietų Europoje (Italijoje, Ispanijoje), Pietų Amerikoje ar Artimuosiuose Rytuose žmonės stovi labai arti vienas kito, nebijo fizinio kontakto (prisilietimų prie peties ar rankos). Tuo tarpu Šiaurės Europoje (Skandinavijoje, Vokietijoje), Rytų Azijoje, taip pat ir Lietuvoje – vertinamas asmeninės erdvės išlaikymas. Jei bendraudami su pietiečiu instinktyviai atsitrauksite atgal, jis tai gali priimti kaip šaltumą ar atmetimą.</li>
+            <li><strong>Tiesioginis vs. netiesioginis stilius.</strong> Šalyse kaip JAV ar Vokietija, žmonės kalba tiesmukai: jei kas nors nepatinka, jie taip ir pasakys („taip“ reiškia taip, „ne“ reiškia ne). Tačiau Rytų Azijos ar Artimųjų Rytų kultūrose itin svarbu išsaugoti „veidą“ (savo ir kito žmogaus orumą). Ten vengiama tiesioginio „ne“; vietoje jo sakoma „tai gali būti sunku įgyvendinti“ arba „mes pagalvosime“.</li>
+            <li><strong>Tyla ir pertraukimai.</strong> Vakariečiams tyla pokalbio metu dažnai atrodo nejauki, atsiranda noras ją užpildyti žodžiais. Japonijoje, Kinijoje ar Suomijoje tyla yra gilaus mąstymo ir pagarbos kalbėtojui ženklas – ji reiškia, kad jūsų žodžiai yra vertinami. Taip pat Italijoje ar Ispanijoje pokalbio partnerio pertraukimas dažnai reiškia susidomėjimą ir aistrą temai, kai tuo tarpu Šiaurės šalyse tai laikoma labai nemandagiu elgesiu.</li>
+          </ul>
+        `
+      },
+      {
+        id: 'business_cultures',
+        title: 'Verslo etiketas pasaulyje',
+        imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80',
+        content: `
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">JAV</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Vertinamas tiesmukiškumas ir greitis („Time is money“). Rankos paspaudimas turi būti tvirtas. Derybos dažnai būna greitos ir orientuotos į rezultatą.</p>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Kinija</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Svarbiausia – santykiai (<em>guanxi</em>). Verslo kortelės teikiamos abiem rankomis, jas reikia atidžiai perskaityti. Hierarchija yra labai svarbi – pirmiausia sveikinamasi su vyriausiuoju.</p>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Japonija</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tyla yra aukso vertės. Nusilenkimas rodo pagarbą. Vizitinės kortelės (<em>meishi</em>) yra šventos – negalima ant jų rašyti ar dėti į kišenę. Sprendimai priimami lėtai, siekiant konsensuso.</p>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Jungtinė Karalystė</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Vertinamas mandagumas, santūrumas ir humoras. Tiesioginis „ne“ dažnai pakeičiamas mandagiomis frazėmis („I'm afraid that might be difficult“). Punktualumas yra būtinas.</p>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Prancūzija</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Kreipinys „Vous“ (Jūs) yra standartas. Pietūs yra svarbi verslo dalis ir gali trukti ilgai. Vertinamas gebėjimas diskutuoti ir argumentuoti.</p>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Vokietija</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Tvarka (<em>Ordnung</em>) ir punktualumas yra viskas. Titulai (Daktaras, Profesorius) yra labai svarbūs. Bendravimas tiesioginis, be nereikalingų emocijų.</p>
+          
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary-800 dark:text-primary-300">Indija</h3>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Laikas suvokiamas lanksčiau. Svarbi hierarchija ir pagarba vyresniems. Tradicinis pasisveikinimas „Namaste“ (sudėjus delnus) yra vertinamas, nors rankos paspaudimas taip pat įprastas.</p>
         `
       }
     ]
@@ -2059,5 +2555,41 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation: 'Geras pašnekovas yra tas, kuris moka klausytis ir girdėti kitą.'
+  },
+  {
+    id: 'q101',
+    question: 'Ką reiškia tiesioginis akių kontaktas Azijos kultūrose?',
+    options: [
+      'Pasitikėjimą ir atvirumą',
+      'Nepagarbą ar iššūkį (ypač vyresniam)',
+      'Meilę',
+      'Baimę'
+    ],
+    correctIndex: 1,
+    explanation: 'Skirtingai nei Vakaruose, Azijoje ilgas tiesioginis žiūrėjimas į akis vyresniam asmeniui gali būti laikomas nepagarba.'
+  },
+  {
+    id: 'q102',
+    question: 'Kaip vertinama tyla pokalbio metu Japonijoje ar Suomijoje?',
+    options: [
+      'Kaip nejaukus momentas',
+      'Kaip normali bendravimo dalis (pagarba, mąstymas)',
+      'Kaip pyktis',
+      'Kaip nežinojimas ką sakyti'
+    ],
+    correctIndex: 1,
+    explanation: 'Šiose kultūrose tyla yra vertinama teigiamai – ji rodo, kad pašnekovas apmąsto jūsų žodžius.'
+  },
+  {
+    id: 'q103',
+    question: 'Kaip elgtis, jei pietietis (pvz., italas) stovi labai arti jūsų?',
+    options: [
+      'Stumti jį',
+      'Trauktis atgal',
+      'Suprasti, kad tai jų kultūrinė norma (mažesnė asmeninė erdvė)',
+      'Rėkti'
+    ],
+    correctIndex: 2,
+    explanation: 'Pietų šalyse asmeninė erdvė yra mažesnė nei Šiaurės Europoje. Tai rodo draugiškumą, o ne agresiją.'
   }
 ];

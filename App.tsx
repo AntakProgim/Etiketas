@@ -135,11 +135,20 @@ function App() {
         <div className="max-w-5xl mx-auto">
           
           {/* Header */}
-          <header className="mb-10 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-800 dark:text-primary-400 mb-2">
-              {APP_TITLE}
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400 font-light text-lg">{APP_SUBTITLE}</p>
+          <header className="mb-10 text-center md:text-left flex flex-col md:flex-row items-center md:items-start gap-4">
+             <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-xl flex items-center justify-center shadow-sm border border-primary-200 dark:border-primary-800 text-primary-600 dark:text-primary-300">
+               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                  <path d="M8 7h6"/>
+                  <path d="M8 11h8"/>
+               </svg>
+             </div>
+             <div>
+               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-800 dark:text-primary-400 mb-2">
+                 {APP_TITLE}
+               </h2>
+               <p className="text-gray-500 dark:text-gray-400 font-light text-lg">{APP_SUBTITLE}</p>
+             </div>
           </header>
 
           {/* Content Area */}
@@ -229,6 +238,7 @@ function App() {
                 onSaveRule={handleSaveRule}
                 onSelectLesson={(lesson) => setSelectedLesson(lesson)}
                 userRole={userRole}
+                selectedGoals={selectedGoals}
               />
             )}
 
@@ -251,6 +261,7 @@ function App() {
                   currentTopic={selectedTopic} 
                   currentLesson={selectedLesson} 
                   userRole={userRole}
+                  selectedGoals={selectedGoals}
                 />
               </div>
             )}

@@ -1,10 +1,3 @@
-import { GoogleGenAI } from "@google/genai";
-
-const apiKey = process.env.GEMINI_API_KEY;
-
-// Only initialize if API key is present to avoid immediate crashes
-const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
-
 interface AIContext {
   topic?: { title: string; description: string };
   lesson?: { title: string; content: string };
@@ -13,10 +6,6 @@ interface AIContext {
 }
 
 export const getGeminiResponse = async (userPrompt: string, context?: AIContext): Promise<string> => {
-  if (!ai) {
-    return "Atsiprašome, AI asistentas šiuo metu nepasiekiamas (trūksta API rakto).";
-  }
-
   let contextInstruction = "";
   if (context?.topic) {
     contextInstruction += `\nVartotojas šiuo metu domisi tema: "${context.topic.title}" (${context.topic.description}).`;
@@ -37,7 +26,7 @@ export const getGeminiResponse = async (userPrompt: string, context?: AIContext)
 
     Jūsų asmenybė ir tonas:
     - Prisitaikykite prie vartotojo rolės (jei žinoma):
-      - Jei tai mokinys: Būkite kaip šaunus vyresnis draugas ar treneris. Naudokite "Tu", kalbėkite paprastai, gyvai ir su humoru.
+      - Jei tai mokinys: Būkite kaip šaunus vyresnis draugas ar treneris. Nauokite "Tu", kalbėkite paprastai, gyvai ir su humoru.
       - Jei tai darbuotojas/suaugęs: Būkite profesionalus, bet šiltas konsultantas. Naudokite "Jūs", remkitės profesine aplinka.
     - Būkite proaktyvus! Ne tik atsakykite į klausimą, bet ir užduokite atvirą klausimą, skatinantį tęsti pokalbį.
 
@@ -50,7 +39,7 @@ export const getGeminiResponse = async (userPrompt: string, context?: AIContext)
 
     Kontekstas:
     ${contextInstruction}
-    Jei vartotojas užduoda klausimą, susijusį su dabartine tema ar pamoka, pasistenkite atsakyti remdamiesi šiuo kontekstu, bet pridėkite praktinį patarimą ir proaktyvų klausimą.
+    Jei vartotojas užduoda klausimą, susijusį su dabartine tema ar pamoka, pasistenkate atsakyti remdamiesi šiuo kontekstu, bet pridėkite praktinį patarimą ir proaktyvų klausimą.
 
     Papildomos funkcijos:
     - Jei vartotojas paprašo "patikrink mane", "testas" arba "klausimynas", sukurkite trumpą, smagų situacinį žaidimą ("Ką darytum, jei...?").
@@ -60,17 +49,23 @@ export const getGeminiResponse = async (userPrompt: string, context?: AIContext)
   `;
 
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-3-pro-preview',
-      contents: userPrompt,
-      config: {
-        systemInstruction: systemInstruction,
-      }
+    const response = await fetch("/api/gemini", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ userPrompt, systemInstruction })
     });
 
-    return response.text || "Atsiprašau, negalėjau sugeneruoti atsakymo. Prašau pakartoti klausimą.";
+    if (!response.ok) {
+      const errData = await response.json().catch(() => ({}));
+      throw new Error(errData.error || `HTTP error ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.text || "Atsiprašau, negalėjau sugeneruoti atsakymo. Prašau pakartoti klausimą.";
   } catch (error) {
-    console.error("Gemini API Error:", error);
+    console.error("Gemini API Client Error:", error);
     return "Įvyko klaida susisiekiant su etiketo ekspertu. Pabandykite vėliau.";
   }
 };

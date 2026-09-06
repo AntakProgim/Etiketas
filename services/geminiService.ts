@@ -58,14 +58,15 @@ export const getGeminiResponse = async (userPrompt: string, context?: AIContext)
     });
 
     if (!response.ok) {
-      const errData = await response.json().catch(() => ({}));
-      throw new Error(errData.error || `HTTP error ${response.status}`);
+      const errData = await response.json().catch(() => null);
+      const errText = errData ? errData.error : await response.text().catch(() => "Unknown error");
+      throw new Error(errText || `HTTP error ${response.status}`);
     }
 
     const data = await response.json();
     return data.text || "Atsiprašau, negalėjau sugeneruoti atsakymo. Prašau pakartoti klausimą.";
-  } catch (error) {
+  } catch (error: any) {
     console.error("Gemini API Client Error:", error);
-    return "Įvyko klaida susisiekiant su etiketo ekspertu. Pabandykite vėliau.";
+    return `Sistemos klaida: ${error.message}. (Jei matote šią klaidą "Netlify" aplinkoje, įsitikinkite, kad tikrai perkrovėte ir įkėlėte naujausią kodo versiją).`;
   }
 };

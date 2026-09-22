@@ -39,24 +39,14 @@ export interface QuizQuestion {
   explanation: string;
 }
 
-export interface SavedRule {
-  id: string;
-  text: string;
-  lessonTitle: string;
-  lessonId: string;
-  date: string;
-}
-
 export enum ViewState {
   HOME = 'HOME',
   TOPIC = 'TOPIC',
   LESSON = 'LESSON',
   QUIZ = 'QUIZ',
   AI_CHAT = 'AI_CHAT',
-  SAVED_RULES = 'SAVED_RULES',
   FULL_GUIDE = 'FULL_GUIDE',
-  RESOURCES = 'RESOURCES',
-  GOALS = 'GOALS'
+  RESOURCES = 'RESOURCES'
 }
 
 export type UserRole = 'student' | 'employee';

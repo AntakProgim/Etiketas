@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Lesson, UserRole } from '../types';
-import { ArrowLeft, CheckCircle, Circle, BookmarkPlus, ImageOff, Sparkles, Volume2, Square, Briefcase, GraduationCap } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Circle, ImageOff, Sparkles, Briefcase, GraduationCap } from 'lucide-react';
 import { TOPICS } from '../constants';
 
 interface LessonViewProps {
@@ -8,72 +8,12 @@ interface LessonViewProps {
   onBack: () => void;
   isCompleted: boolean;
   onToggleComplete: () => void;
-  onSaveRule: (text: string, lessonTitle: string) => void;
   onSelectLesson: (lesson: Lesson) => void;
   userRole?: UserRole | null;
-  selectedGoals?: string[];
 }
 
-const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, onToggleComplete, onSaveRule, onSelectLesson, userRole, selectedGoals }) => {
-  const [selection, setSelection] = useState<{ x: number; y: number; text: string } | null>(null);
+const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, onToggleComplete, onSelectLesson, userRole }) => {
   const [imgError, setImgError] = useState(false);
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleSelectionChange = () => {
-      const selectedText = window.getSelection()?.toString().trim();
-      
-      if (selectedText && selectedText.length > 5 && contentRef.current) {
-        const selectionRange = window.getSelection()?.getRangeAt(0);
-        if (selectionRange) {
-          const rect = selectionRange.getBoundingClientRect();
-          // Calculate position relative to viewport
-          setSelection({
-            x: rect.left + rect.width / 2,
-            y: rect.top - 10, // Position slightly above text
-            text: selectedText
-          });
-        }
-      } else {
-        setSelection(null);
-      }
-    };
-
-    document.addEventListener('selectionchange', handleSelectionChange);
-    return () => {
-      document.removeEventListener('selectionchange', handleSelectionChange);
-      window.speechSynthesis.cancel();
-    };
-  }, []);
-
-  const handleSaveClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (selection) {
-      onSaveRule(selection.text, lesson.title);
-      // Clear selection visual
-      window.getSelection()?.removeAllRanges();
-      setSelection(null);
-    }
-  };
-
-  const handleSpeak = () => {
-    if (isSpeaking) {
-      window.speechSynthesis.cancel();
-      setIsSpeaking(false);
-      return;
-    }
-
-    const text = contentRef.current?.innerText || '';
-    if (!text) return;
-
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'lt-LT';
-    utterance.onend = () => setIsSpeaking(false);
-    
-    window.speechSynthesis.speak(utterance);
-    setIsSpeaking(true);
-  };
 
   // Find related lessons
   const currentTopic = TOPICS.find(t => t.lessons.some(l => l.id === lesson.id));
@@ -83,23 +23,6 @@ const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, on
 
   return (
     <div className="max-w-3xl mx-auto relative pb-20">
-      {/* Floating Save Button */}
-      {selection && (
-        <div 
-          className="fixed z-50 transform -translate-x-1/2 -translate-y-full animate-bounce-in"
-          style={{ left: selection.x, top: selection.y }}
-        >
-          <button
-            onClick={handleSaveClick}
-            className="flex items-center gap-2 bg-primary-800 text-white px-4 py-2 rounded-full shadow-lg hover:bg-primary-700 transition-colors text-sm font-medium whitespace-nowrap"
-          >
-            <BookmarkPlus className="w-4 h-4" />
-            Išsaugoti taisyklę
-          </button>
-          <div className="w-3 h-3 bg-primary-800 transform rotate-45 absolute left-1/2 -bottom-1.5 -translate-x-1/2"></div>
-        </div>
-      )}
-
       <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 overflow-hidden mb-6">
         <div className="relative h-64 md:h-80 w-full bg-gray-100 dark:bg-slate-700">
           {!imgError ? (
@@ -123,24 +46,10 @@ const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, on
           >
             <ArrowLeft className="w-6 h-6 text-gray-800 dark:text-white" />
           </button>
-
-          <button 
-            onClick={handleSpeak}
-            className="absolute top-4 right-4 bg-white/90 dark:bg-slate-800/90 p-2 rounded-full shadow-lg hover:bg-white dark:hover:bg-slate-800 transition-colors text-primary-700 dark:text-primary-400 flex items-center gap-2 px-4"
-          >
-            {isSpeaking ? <Square className="w-5 h-5 fill-current" /> : <Volume2 className="w-5 h-5" />}
-            <span className="font-medium text-sm">{isSpeaking ? 'Sustabdyti' : 'Klausyti'}</span>
-          </button>
         </div>
         
         <div className="p-6 md:p-10 relative">
-          <div className="mb-4 bg-primary-50 dark:bg-primary-900/20 p-3 rounded-lg flex items-start text-sm text-primary-700 dark:text-primary-300 border border-primary-100 dark:border-primary-800">
-            <BookmarkPlus className="w-5 h-5 mr-2 flex-shrink-0" />
-            <p>Pažymėkite bet kurį tekstą pelyte, kad išsaugotumėte svarbią taisyklę.</p>
-          </div>
-
           <div 
-            ref={contentRef}
             className="prose dark:prose-invert prose-slate prose-lg max-w-none 
               prose-headings:font-serif prose-headings:text-primary-900 dark:prose-headings:text-primary-100
               prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-li:marker:text-primary-500 dark:prose-li:marker:text-primary-400"

@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import TopicCard from './components/TopicCard';
 import LessonView from './components/LessonView';
-import SavedRulesView from './components/SavedRulesView';
 import FullGuideView from './components/FullGuideView';
-import GoalsView from './components/GoalsView';
-import { ViewState, Topic, Lesson, SavedRule, UserRole } from './types';
+import { ViewState, Topic, Lesson, UserRole } from './types';
 import { TOPICS, APP_TITLE, APP_SUBTITLE } from './constants';
 import { ArrowLeft, CheckCircle, ImageOff } from 'lucide-react';
 
@@ -27,18 +25,6 @@ function App() {
     return saved ? new Set(JSON.parse(saved)) : new Set();
   });
 
-  // Saved Rules State
-  const [savedRules, setSavedRules] = useState<SavedRule[]>(() => {
-    const saved = localStorage.getItem('savedRules');
-    return saved ? JSON.parse(saved) : [];
-  });
-
-  // User Goals State
-  const [selectedGoals, setSelectedGoals] = useState<string[]>(() => {
-    const saved = localStorage.getItem('selectedGoals');
-    return saved ? JSON.parse(saved) : [];
-  });
-
   useEffect(() => {
     if (userRole) {
       localStorage.setItem('userRole', userRole);
@@ -50,14 +36,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem('completedLessons', JSON.stringify(Array.from(completedLessons)));
   }, [completedLessons]);
-
-  useEffect(() => {
-    localStorage.setItem('savedRules', JSON.stringify(savedRules));
-  }, [savedRules]);
-
-  useEffect(() => {
-    localStorage.setItem('selectedGoals', JSON.stringify(selectedGoals));
-  }, [selectedGoals]);
 
   const handleTopicClick = (topic: Topic) => {
     setSelectedTopic(topic);
@@ -94,31 +72,6 @@ function App() {
         newSet.add(lessonId);
       }
       return newSet;
-    });
-  };
-
-  const handleSaveRule = (text: string, lessonTitle: string) => {
-    const newRule: SavedRule = {
-      id: Date.now().toString(),
-      text,
-      lessonTitle,
-      lessonId: selectedLesson?.id || '',
-      date: new Date().toLocaleDateString('lt-LT')
-    };
-    setSavedRules(prev => [newRule, ...prev]);
-  };
-
-  const handleDeleteRule = (id: string) => {
-    setSavedRules(prev => prev.filter(rule => rule.id !== id));
-  };
-
-  const handleToggleGoal = (goalId: string) => {
-    setSelectedGoals(prev => {
-      if (prev.includes(goalId)) {
-        return prev.filter(id => id !== goalId);
-      } else {
-        return [...prev, goalId];
-      }
     });
   };
 
@@ -234,34 +187,14 @@ function App() {
                 onBack={handleBackToLessons}
                 isCompleted={completedLessons.has(selectedLesson.id)}
                 onToggleComplete={() => toggleLessonComplete(selectedLesson.id)}
-                onSaveRule={handleSaveRule}
                 onSelectLesson={(lesson) => setSelectedLesson(lesson)}
                 userRole={userRole}
-                selectedGoals={selectedGoals}
               />
-            )}
-
-            {/* SAVED RULES VIEW */}
-            {currentView === ViewState.SAVED_RULES && (
-               <SavedRulesView 
-                 rules={savedRules} 
-                 onDeleteRule={handleDeleteRule} 
-               />
             )}
 
             {/* FULL GUIDE VIEW */}
             {currentView === ViewState.FULL_GUIDE && (
               <FullGuideView />
-            )}
-
-            {/* GOALS VIEW */}
-            {currentView === ViewState.GOALS && (
-              <GoalsView 
-                selectedGoals={selectedGoals} 
-                onToggleGoal={handleToggleGoal} 
-                userRole={userRole}
-                onSelectRole={setUserRole}
-              />
             )}
 
           </div>

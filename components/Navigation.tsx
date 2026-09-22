@@ -1,6 +1,6 @@
 import React from 'react';
 import { ViewState } from '../types';
-import { BookOpen, GraduationCap, Bookmark, FileText, Heart, Target, Globe, Sun, Moon } from 'lucide-react';
+import { BookOpen, GraduationCap, FileText, Heart, Globe, Sun, Moon } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 
 interface NavigationProps {
@@ -14,8 +14,6 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onChangeView }) =>
   const navItems = [
     { view: ViewState.HOME, label: 'Pagrindinis', icon: BookOpen },
     { view: ViewState.FULL_GUIDE, label: 'Etiketo knyga', icon: FileText },
-    { view: ViewState.SAVED_RULES, label: 'Mano taisyklės', icon: Bookmark },
-    { view: ViewState.GOALS, label: 'Mano tikslai', icon: Target },
   ];
 
   const externalLink = {

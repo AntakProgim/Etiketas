@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Lesson, UserRole } from '../types';
 import { ArrowLeft, CheckCircle, Circle, BookmarkPlus, ImageOff, Sparkles, Volume2, Square, Briefcase, GraduationCap } from 'lucide-react';
-import AIAssistant from './AIAssistant';
 import { TOPICS } from '../constants';
 
 interface LessonViewProps {
@@ -18,7 +17,6 @@ interface LessonViewProps {
 const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, onToggleComplete, onSaveRule, onSelectLesson, userRole, selectedGoals }) => {
   const [selection, setSelection] = useState<{ x: number; y: number; text: string } | null>(null);
   const [imgError, setImgError] = useState(false);
-  const [showAI, setShowAI] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -211,14 +209,6 @@ const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, on
             </>
           )}
         </button>
-
-        <button
-          onClick={() => setShowAI(!showAI)}
-          className="flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium transition-colors"
-        >
-          <Sparkles className="w-5 h-5 mr-2" />
-          {showAI ? 'Uždaryti DI asistentą' : 'Klausti DI apie šią pamoką'}
-        </button>
       </div>
 
       {/* Related Lessons Section */}
@@ -242,12 +232,6 @@ const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, isCompleted, on
               </div>
             ))}
           </div>
-        </div>
-      )}
-
-      {showAI && (
-        <div className="animate-fade-in-up mb-8">
-          <AIAssistant currentLesson={lesson} userRole={userRole} selectedGoals={selectedGoals} />
         </div>
       )}
     </div>

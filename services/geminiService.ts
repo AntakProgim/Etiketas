@@ -67,6 +67,6 @@ export const getGeminiResponse = async (userPrompt: string, context?: AIContext)
     return data.text || "Atsiprašau, negalėjau sugeneruoti atsakymo. Prašau pakartoti klausimą.";
   } catch (error: any) {
     console.error("Gemini API Client Error:", error);
-    return `Sistemos klaida: ${error.message}. (Jei matote šią klaidą "Netlify" aplinkoje, įsitikinkite, kad tikrai perkrovėte ir įkėlėte naujausią kodo versiją).`;
+    return `Sistemos klaida: ${error.message}`;
   }
 };

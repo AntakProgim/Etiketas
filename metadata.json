@@ -1,5 +1,8 @@
 {
   "name": "Etiketo gidas",
-  "description": "Išsami etiketo mokymosi programėlė, apimanti kasdienį, dalykinį ir stalo etiketą su interaktyviu DI pagalbininku.",
-  "requestFramePermissions": []
+  "description": "Išsami etiketo mokymosi programėlė, apimanti kasdienį, dalykinį ir stalo etiketą.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

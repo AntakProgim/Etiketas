@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import TopicCard from './components/TopicCard';
 import LessonView from './components/LessonView';
-import AIAssistant from './components/AIAssistant';
 import SavedRulesView from './components/SavedRulesView';
 import FullGuideView from './components/FullGuideView';
 import GoalsView from './components/GoalsView';
@@ -248,22 +247,6 @@ function App() {
                  rules={savedRules} 
                  onDeleteRule={handleDeleteRule} 
                />
-            )}
-
-            {/* AI CHAT VIEW */}
-            {currentView === ViewState.AI_CHAT && (
-              <div>
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-serif font-bold text-gray-900 dark:text-white">Eksperto konsultacija</h3>
-                  <p className="text-gray-500 dark:text-gray-400">Dirbtinis intelektas pasiruošęs atsakyti į Jūsų klausimus</p>
-                </div>
-                <AIAssistant 
-                  currentTopic={selectedTopic} 
-                  currentLesson={selectedLesson} 
-                  userRole={userRole}
-                  selectedGoals={selectedGoals}
-                />
-              </div>
             )}
 
             {/* FULL GUIDE VIEW */}
